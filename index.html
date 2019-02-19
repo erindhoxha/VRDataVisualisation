@@ -22,11 +22,9 @@
 
 <body>
 
-  <div class="first-div-info js-tilt"  data-tilt-axis="x" data-tilt-scale="1" data-tilt-speed="400" data-tilt-transition="true">
-
+  <div class="first-div-info container-fluid m-0 p-0  js-tilt" data-tilt-axis="xy" data-tilt-perspective="1000" data-tilt-speed="400">
       <svg version="1.1" id="vr-glasses-outline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
       viewBox="0 0 256.7 198.7" style="enable-background:new 0 0 256.7 198.7;" xml:space="preserve">
-
    <g>
      <path class="st0" d="M-21.5,68c-1.1-1.5-0.8-2.8-0.2-4.3c1.6-4,3-8,4.7-11.9c0.3-0.8,1.3-1.4,1.9-2.1c0.3-0.4,0.8-0.7,0.9-1.2
        c1.5-6.7,3.9-13.1,8.1-18.7c3.9-5.2,9-8.8,15-11.1c9-3.4,18.3-4.9,27.8-6c7.3-0.8,14.7-0.9,22-0.1c8.9,0.9,17.1,3.9,24.9,8.1
@@ -105,15 +103,27 @@
           </div>
         </div>
       </div>
+    </div>
 
-    </div>
-    <div class="stat-box">
-    <h1 class="text-white text-center vr-stat-number" style="z-index:9999">100,000 people use it everyday.</h1>
-    <h1 class="text-white text-center vr-stat-number" style="z-index:9999">1924 open VR Rooms.</h1>
-    </div>
-    <div class="overlay text-white">
+  </div>
+
+  <div class="first-div-info2 container-fluid m-0 p-0">
+    <div class="overlay-div2">
+      <div class="first-div-box2 text-white">
+        <div class="stat-box">
+            <h1 class="text-white text-center vr-stat-number" style="z-index:9999">100,000 people use it everyday.</h1>
+            <h1 class="text-white text-center vr-stat-number" style="z-index:9999">1924 open VR Rooms.</h1>
+            </div>
+            <div class="overlay text-white  js-tilt" data-tilt-axis="xy" data-tilt-speed="400">
+          </div>
+      </div>
     </div>
   </div>
+
+<div class="container">
+
+</div>
+
   <!-- <img id="vr-left" class="fadeInLeft animated" src="img/vr-left.png" alt="">
   <img id="vr-right" class="fadeInRight animated" src="img/vr-right.png" alt=""> -->
 
@@ -129,9 +139,7 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/tilt.jquery.js"></script>
   <script>
-
   const tilt = $('.js-tilt').tilt();
-
 </script>
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>

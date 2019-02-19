@@ -292,7 +292,7 @@ textarea {
     }
 }
 
-.first-div-info {
+.first-div-info, .first-div-info2 {
     height:100vh;
     width:100%;
     background-color: #000000;
@@ -301,6 +301,10 @@ textarea {
 .overlay-div {
     height:100%;
     background: linear-gradient(180deg, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.7) 80.00%, rgba(0,0,0,1) 100.00%);
+}
+.overlay-div2 {
+    height:100%;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 55%, rgba(0,0,0,0.4) 80.00%, rgba(0,0,0,1) 100.00%);
 }
 #img-logo {
     width:150px;
@@ -319,8 +323,8 @@ textarea {
     top:30%;
 }
 .overlay {
-    width:1000px;
-    height:1000px;
+    width:60%;
+    height:100%;
     margin:0 auto;
     background-image:url('../img/abstract.jpeg');
     background-size:cover;
@@ -337,10 +341,15 @@ textarea {
     align-items:center;
     background-color:rgba(0,0,0,0);
 }
-  .svg-border-mask {
-    -webkit-mask-box-image: url(../img/glasses.svg) 30 repeat;
-    mask-border: url(../img/glasses.svg) 30 repeat;
-  }
+
+.first-div-box2 {
+    img {
+        width:200px;
+    }
+    height:100%;
+    background-color:rgba(0,0,0,0);
+}
+
 .vr-stat-number {
     font-weight:900;
     font-size:50px;

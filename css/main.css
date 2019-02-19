@@ -224,7 +224,7 @@ textarea {
   h2,
   h3 {
     page-break-after: avoid; } }
-.first-div-info {
+.first-div-info, .first-div-info2 {
   height: 100vh;
   width: 100%;
   background-color: #000000;
@@ -233,6 +233,10 @@ textarea {
 .overlay-div {
   height: 100%;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 55%, rgba(0, 0, 0, 0.7) 80%, black 100%); }
+
+.overlay-div2 {
+  height: 100%;
+  background: linear-gradient(180deg, black 55%, rgba(0, 0, 0, 0.4) 80%, black 100%); }
 
 #img-logo {
   width: 150px;
@@ -251,8 +255,8 @@ textarea {
   top: 30%; }
 
 .overlay {
-  width: 1000px;
-  height: 1000px;
+  width: 60%;
+  height: 100%;
   margin: 0 auto;
   background-image: url("../img/abstract.jpeg");
   background-size: cover;
@@ -268,9 +272,11 @@ textarea {
   .first-div-box img {
     width: 200px; }
 
-.svg-border-mask {
-  -webkit-mask-box-image: url(../img/glasses.svg) 30 repeat;
-  mask-border: url(../img/glasses.svg) 30 repeat; }
+.first-div-box2 {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); }
+  .first-div-box2 img {
+    width: 200px; }
 
 .vr-stat-number {
   font-weight: 900;
