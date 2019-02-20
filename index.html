@@ -20,54 +20,10 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
-
-
-<div class="wrapper">
-  <div id="nav-side">
-    <a class="text-white" href="#">erindhox</a>
-    <li></li><a href="#section1">Section 1</a></li>
-    <li></li><a href="#section1">Section 1</a></li>
-    <li></li><a href="#section1">Section 1</a></li>
-  </div>
-</div>
-
-
-
-
-
-
+<body data-spy="scroll" data-target="#nav-side" data-offset="50">
 <div style="transform-style: preserve-3d" class=" first-div-info container-fluid m-0 p-0 js-tilt" data-tilt-axis="xy"
   data-tilt-perspective="1000" data-tilt-speed="400">
-
-  <nav class="navbar navbar-inverse navbar-fixed-top nav-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand text-white" href="#">erindhox</a>
-      </div>
-      <div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li><a href="#section1">Section 1</a></li>
-            <li><a href="#section2">Section 2</a></li>
-            <li><a href="#section3">Section 3</a></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#section41">Section 4-1</a></li>
-                <li><a href="#section42">Section 4-2</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <div class="svg-box">
+  <div  id="section1" class="svg-box">
 <svg style="transform: translateZ(180px); transform:scale(-1,1)" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 612 792"
   version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256.7 198.7"
   style="enable-background:new 0 0 256.7 198.7;" xml:space="preserve" id="svg-headset">
@@ -160,8 +116,8 @@
 
   </div>
 
-  <div class="people-using-vr-rooms container-fluid m-0 mt-5 p-0 pt=5">
-        <div class="stat-box-2 pt-3">
+  <div class="people-using-vr-rooms container-fluid m-0 mt-5 p-0 pt-5">
+        <div class="stat-box-2 pt-5">
 <svg version="1.1" id="text-100000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   viewBox="0 0 732 264.9" style="enable-background:new 0 0 732 264.9;" xml:space="preserve">
 <g>
@@ -233,11 +189,17 @@
 </svg>
       <h1 class="text-white text-center vr-stat-number" style="z-index:9999">1924 open VR Rooms.</h1>
       </div>
-      <canvas id="myChart" width="400" height="200"></canvas>
+      <canvas id="myChart" width="400" height="150"></canvas>
+      
   </div>
-
-
-
+<nav class="wrapper" id="nav-sidebar">
+  <div id="nav-side">
+    <a class="text-white" href="#">erindhox_</a>
+    <li></li><a href="#section1">Chart Data</a></li>
+    <li></li><a href="#section1">VR Rooms</a></li>
+    <li></li><a href="#section1">Concept</a></li>
+  </div>
+</nav>
 
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -256,44 +218,48 @@
         <script>
           var ctx = document.getElementById("myChart").getContext('2d');
           var myChart = new Chart(ctx, {
-            type: 'line',
+            type: 'pie',
             data: {
-              labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: 
+              ['Auckland', 'Wellington', 'Hamilton', 'Dunedin', 'Christchurch'],
               datasets: [{
                 label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                data: [15, 11],
                 backgroundColor: [
-                  'rgba(255, 99, 132, 0.2)',
-                  'rgba(54, 162, 235, 0.2)',
-                  'rgba(255, 206, 86, 0.2)',
-                  'rgba(75, 192, 192, 0.2)',
-                  'rgba(153, 102, 255, 0.2)',
-                  'rgba(255, 159, 64, 0.2)'
+                  'rgba(19, 165, 255, 0.721)',
+                  'rgba(28, 28, 184, 0.721)',
+                  'rgba(212, 119, 184, 0.721)',
+                  'rgba(22, 221, 184, 0.721)',
+                  'rgba(22, 221, 184, 0.721)',
                 ],
                 borderColor: [
-                  'rgba(255,99,132,1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(255, 206, 86, 1)',
-                  'rgba(75, 192, 192, 1)',
-                  'rgba(153, 102, 255, 1)',
-                  'rgba(255, 159, 64, 1)'
                 ],
-                borderWidth: 1
+                borderWidth: 0
               }]
             },
             options: {
-              padding: {
-                left: 50,
-                right: 0,
-                top: 0,
-                bottom: 0
+              layout: {
+                padding: 30,
+                left: 10,
+                top: 5,
               },
               scales: {
                 yAxes: [{
                   ticks: {
-                    beginAtZero: true
-                  }
+                    padding: 25,
+                    beginAtZero: true,
+                    display: false
+                  },
+                  display:false,
                 }]
+              }
+            },
+            layout: {
+              padding: {
+                left:50,
+                top:50,
+                bottom:0,
+                right:0
               }
             }
           });

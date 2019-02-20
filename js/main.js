@@ -1,5 +1,11 @@
 
-
+$(".vr-send").click(function () {
+    startSVGAnimationText($('#text-100000'));
+    $('html,body').animate({
+        scrollTop: $(".people-using-vr-rooms").offset().top
+    },
+        'slow');
+});
 
 
 //Illustration By Rick Granados

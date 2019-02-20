@@ -24,11 +24,16 @@ $orange: #FF5719;
         font-family:'Titillium Web';
         background-color:black !important;
     }
+    a:-webkit-any-link {
+        text-decoration: none;
+    }
     #nav-side {
         a {
             padding:0px;
             padding-right:20px;
+            text-decoration: none;
         }
+
         li {
             padding-right:10px;
             padding:0px;
@@ -46,8 +51,6 @@ $orange: #FF5719;
         color:white;
         z-index:999999999999999;
         position:absolute;
-        width:100%;
-        height:100%;
     }
 
 /*
@@ -418,6 +421,12 @@ textarea {
     1px -1px $main-color;
     border: 1px solid $main-color;
 }
+canvas canvas {
+        box-shadow: 3px -3px $main-color,
+        2px -2px $main-color,
+        1px -1px $main-color;
+        border: 1px solid $main-color;
+}
 .vr-send:hover {
     color:black;
     background-color:$main-color;
@@ -504,11 +513,10 @@ path {
              }
          }
 
-#myChart {
-    margin:0 auto;
-}
+
 .nav-top {
     background-color:transparent;
     color:white;
     z-index:9999;
 }
+
