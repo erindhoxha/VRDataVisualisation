@@ -239,16 +239,23 @@ function startSVGAnimationText(parentElement) {
     drawSVGPaths(parentElement, 2430, 100, 200);
 }
 
+
 replaceWithPaths($('svg'));
 startSVGAnimation($('#svg-headset'));
 startSVGAnimationText($('#text-100000'));
 
 $("#svg-australia").hide();
 $("#svg-new-zealand").hide();
+$("#svg-europe").hide();
+
+function startSVGAnimationEurope(parentElement) {
+    drawSVGPaths(parentElement, 900, 222, 100);
+}
 
 $(".australia-btn").on('click', function(){
     $("#svg-australia").show();
     $("#svg-new-zealand").show();
+    $("#svg-europe").fadeOut(300);
     $(".myChart").attr('id', 'myChart');
     $("#myChart").show();
     addChartForAustralia();
@@ -259,7 +266,9 @@ $(".australia-btn").on('click', function(){
 $(".europe-btn").on('click', function() {
     $(".myChart").attr('id', 'myChart');
     $("#myChart").show();
+    $("#svg-europe").show();
     addChartForEurope()
+    startSVGAnimationEurope("#svg-europe");
     $("#svg-australia").fadeOut(300);
     $("#svg-new-zealand").fadeOut(300);
 })

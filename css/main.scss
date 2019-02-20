@@ -581,3 +581,21 @@ path {
     }
 }
 
+#svg-europe {
+    position: absolute;
+    height: 500px;
+    display: block;
+    z-index:-1;
+    path {
+        fill: none;
+        stroke: $main-color;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        &.st1 {
+            stroke-width: 2;
+        }
+    }
+}
+
