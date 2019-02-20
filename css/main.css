@@ -446,6 +446,23 @@ path {
     #svg-new-zealand path.st1 {
       stroke-width: 1; }
 
+#stLiberty {
+  position: absolute;
+  height: 50vh;
+  display: block;
+  left: 10%;
+  margin-bottom: 20px;
+  z-index: -1; }
+  #stLiberty path {
+    fill: none;
+    stroke: rgba(19, 165, 255, 0.721);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10; }
+    #stLiberty path.st1 {
+      stroke-width: 1; }
+
 #svg-australia {
   position: absolute;
   height: 500px;
@@ -491,5 +508,12 @@ path {
     stroke-miterlimit: 10; }
     #svg-europe-flag path.st1 {
       stroke-width: 1; }
+
+button:active {
+  outline: none;
+  border: none; }
+
+button:focus {
+  outline: 0 !important; }
 
 /*# sourceMappingURL=main.css.map */
