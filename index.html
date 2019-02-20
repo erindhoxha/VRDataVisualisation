@@ -95,11 +95,13 @@
     <div class="overlay-div">
       <div class="first-div-box text-white">
         <div class="row">
-          <div class="col-lg-12 text-center">
+          <div class="col-lg-12 text-left">
               <img id="img-logo" src="img/vr-logo.png">
           </div>
-          <div class="col-lg-12">
-          <h1 class="text-center" style="z-index:999999; font-weight:900;">Virtual Reality Statistics</h1>
+          <div class="col-lg-12 text-left">
+          <h1 class="text-left" style="z-index:999999; font-weight:900;">Virtual Reality Statistics</h1>
+          <h1 class="text-left" style="z-index:999999; font-weight:900;">Made with graphs, illustrations and more...</h1>
+          <button class="vr-send">Go down</button>
           </div>
         </div>
       </div>
@@ -107,28 +109,45 @@
 
   </div>
 
-  <div class="first-div-info2 container-fluid m-0 p-0">
+  <div class="first-div-info2 container-fluid m-0 p-0 js-tilt" data-tilt-axis="xy" data-tilt-perspective="1000" data-tilt-speed="400">
     <div class="overlay-div2">
-      <div class="first-div-box2 text-white">
-        <div class="stat-box">
-            <h1 class="text-white text-center vr-stat-number" style="z-index:9999">100,000 people use it everyday.</h1>
+        <div class="stat-box-2 pt-3">
+            <h1 class="text-white text-center vr-stat-number" style="z-index:9999"><span id="num-count">100,000</span><br> people use it everyday.</h1>
             <h1 class="text-white text-center vr-stat-number" style="z-index:9999">1924 open VR Rooms.</h1>
             </div>
-            <div class="overlay text-white  js-tilt" data-tilt-axis="xy" data-tilt-speed="400">
-          </div>
+            <div class="box-image">
+            </div>
+            <!-- <div class="overlay text-white pt-5 mt-5" style="margin-top:100px !important"> -->
+                <!-- js-tilt" data-tilt-axis="xy" data-tilt-speed="400" -->
+          <!-- </div> -->
+      </div>
+
+  </div>
+
+<div class="container text-white div-chart container-vr-headset-div">
+  <div class="row">
+  <div class="left fadeInLeft animated col-lg-6 col-md-12">
+    <div class="row">
+      <div class="col-lg-12">
+        <img id="vr-left" class="" src="img/vr-left.png" alt="">
+      </div>
+      <div class="col-lg-12 text-center">
+        <h5>Between 4 and 5.</h5>
       </div>
     </div>
   </div>
-
-<div class="container">
-
+  <div class="right fadeInRight animated col-lg-6 col-md-12">
+    <div class="row">
+    <div class="col-lg-12">
+    <img id="vr-left" class="" src="img/vr-left.png" style="transform:scale(-1, 1)" alt="">
+    </div>
+      <div class="col-lg-12 text-center">
+        <h5>Between 4 and 5.</h5>
+      </div>
+    </div>
+  </div>
+  </div>
 </div>
-
-  <!-- <img id="vr-left" class="fadeInLeft animated" src="img/vr-left.png" alt="">
-  <img id="vr-right" class="fadeInRight animated" src="img/vr-right.png" alt=""> -->
-
-
-<!-- <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" alt="" class="svg-border-mask" /> -->
 
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

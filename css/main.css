@@ -13,11 +13,13 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
-  font-family: 'Titillium Web'; }
+  font-family: "Titillium Web";
+}
 
 body {
+  font-family: "Titillium Web";
   background-color: black;
-  font-family: 'Titillium Web'; }
+}
 
 /*
  * Remove text-shadow in selection highlight:
@@ -30,7 +32,8 @@ body {
  */
 ::selection {
   background: #b3d4fc;
-  text-shadow: none; }
+  text-shadow: none;
+}
 
 /*
  * A better looking default horizontal rule
@@ -41,7 +44,8 @@ hr {
   border: 0;
   border-top: 1px solid #ccc;
   margin: 1em 0;
-  padding: 0; }
+  padding: 0;
+}
 
 /*
  * Remove the gap between audio, canvas, iframes,
@@ -52,9 +56,9 @@ audio,
 canvas,
 iframe,
 img,
-svg,
 video {
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 /*
  * Remove default fieldset styles.
@@ -62,13 +66,15 @@ video {
 fieldset {
   border: 0;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 /*
  * Allow only vertical resizing of textareas.
  */
 textarea {
-  resize: vertical; }
+  resize: vertical;
+}
 
 /* ==========================================================================
    Browser Upgrade Prompt
@@ -77,7 +83,8 @@ textarea {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
-  padding: 0.2em 0; }
+  padding: 0.2em 0;
+}
 
 /* ==========================================================================
   Author's custom styles
@@ -89,7 +96,8 @@ textarea {
  * Hide visually and from screen readers
  */
 .hidden {
-  display: none !important; }
+  display: none !important;
+}
 
 /*
 * Hide only visually, but have it available for screen readers:
@@ -109,7 +117,8 @@ textarea {
   position: absolute;
   width: 1px;
   white-space: nowrap;
-  /* 1 */ }
+  /* 1 */
+}
 
 /*
 * Extends the .visuallyhidden class to allow the element
@@ -124,13 +133,15 @@ textarea {
   overflow: visible;
   position: static;
   width: auto;
-  white-space: inherit; }
+  white-space: inherit;
+}
 
 /*
 * Hide visually and from screen readers, but maintain layout
 */
 .invisible {
-  visibility: hidden; }
+  visibility: hidden;
+}
 
 /*
 * Clearfix: contain floats
@@ -148,10 +159,12 @@ textarea {
   content: " ";
   /* 1 */
   display: table;
-  /* 2 */ }
+  /* 2 */
+}
 
 .clearfix:after {
-  clear: both; }
+  clear: both;
+}
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -159,9 +172,11 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 @media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */ }
+  /* Style adjustments for viewports that meet the condition */
+}
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */ }
+  /* Style adjustments for high resolution devices */
+}
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
@@ -169,132 +184,221 @@ textarea {
    ========================================================================== */
 @media print {
   *,
-  *:before,
-  *:after {
+*:before,
+*:after {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster */
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    text-shadow: none !important; }
+    text-shadow: none !important;
+  }
 
   a,
-  a:visited {
-    text-decoration: underline; }
+a:visited {
+    text-decoration: underline;
+  }
 
   a[href]:after {
-    content: " (" attr(href) ")"; }
+    content: " (" attr(href) ")";
+  }
 
   abbr[title]:after {
-    content: " (" attr(title) ")"; }
+    content: " (" attr(title) ")";
+  }
 
   /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
   a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: ""; }
+a[href^="javascript:"]:after {
+    content: "";
+  }
 
   pre {
-    white-space: pre-wrap !important; }
+    white-space: pre-wrap !important;
+  }
 
   pre,
-  blockquote {
+blockquote {
     border: 1px solid #999;
-    page-break-inside: avoid; }
+    page-break-inside: avoid;
+  }
 
   /*
    * Printing Tables:
    * http://css-discuss.incutio.com/wiki/Printing_Tables
    */
   thead {
-    display: table-header-group; }
+    display: table-header-group;
+  }
 
   tr,
-  img {
-    page-break-inside: avoid; }
+img {
+    page-break-inside: avoid;
+  }
 
   p,
-  h2,
-  h3 {
+h2,
+h3 {
     orphans: 3;
-    widows: 3; }
+    widows: 3;
+  }
 
   h2,
-  h3 {
-    page-break-after: avoid; } }
+h3 {
+    page-break-after: avoid;
+  }
+}
 .first-div-info, .first-div-info2 {
   height: 100vh;
   width: 100%;
   background-color: #000000;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23006fa1' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23096aa1' fill-opacity='0.5' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
 
 .overlay-div {
   height: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 55%, rgba(0, 0, 0, 0.7) 80%, black 100%); }
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 55%, rgba(0, 0, 0, 0.7) 80%, black 100%);
+}
 
 .overlay-div2 {
   height: 100%;
-  background: linear-gradient(180deg, black 55%, rgba(0, 0, 0, 0.4) 80%, black 100%); }
+  background-color: black;
+}
+
+.div-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
 #img-logo {
   width: 150px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+}
 
 #vr-left {
-  position: absolute;
-  width: 700px;
-  top: 30%;
-  left: 0; }
+  height: 400px;
+}
 
 #vr-right {
-  position: absolute;
-  width: 600px;
-  right: 0;
-  top: 30%; }
+  height: 400px;
+}
 
-.overlay {
-  width: 60%;
-  height: 100%;
-  margin: 0 auto;
+.left {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.glasses-2 {
+  -webkit-mask-box-image: url(../img/glasses.svg);
+  fill: white;
+  background-color: blue;
+}
+
+.box-image {
   background-image: url("../img/abstract.jpeg");
+  opacity: 1;
+  -webkit-mask-box-image: url(../img/glasses3.svg);
   background-size: cover;
   background-position: center;
-  -webkit-mask-box-image: url(../img/glasses2.svg); }
+  height: 40%;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 70%;
+}
 
 .first-div-box {
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 10%;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0); }
-  .first-div-box img {
-    width: 200px; }
+  background-color: rgba(0, 0, 0, 0);
+}
+.first-div-box img {
+  width: 200px;
+}
 
 .first-div-box2 {
   height: 100%;
-  background-color: rgba(0, 0, 0, 0); }
-  .first-div-box2 img {
-    width: 200px; }
+  background-color: rgba(0, 0, 0, 0);
+}
+.first-div-box2 img {
+  width: 200px;
+}
 
 .vr-stat-number {
   font-weight: 900;
-  font-size: 50px; }
+  font-size: 40px;
+}
+
+.vr-send {
+  background-color: transparent;
+  border: 2px solid rgba(19, 165, 255, 0.721);
+  padding: 10px 30px;
+  color: rgba(19, 165, 255, 0.721);
+  font-weight: 600;
+  margin-top: 10px;
+  transition: 0.3s ease-in;
+}
+
+.vr-send:hover {
+  color: black;
+  background-color: rgba(19, 165, 255, 0.721);
+}
 
 .stat-box {
   margin-top: 50px;
   position: absolute;
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
+
+.stat-box2 {
+  margin-top: 50px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#num-count {
+  text-align: center;
+  font-size: 80px;
+  color: rgba(19, 165, 255, 0.721);
+}
 
 .st0 {
-  fill: rgba(100, 134, 118, 0.2); }
+  fill: rgba(19, 165, 255, 0.721);
+  stroke-width: 1px;
+}
 
 #vr-glasses-outline {
   position: absolute;
   width: 700px;
-  left: 0;
-  bottom: 20%; }
+  right: 0;
+  bottom: 20%;
+  stroke-width: 0px;
+  stroke-dasharray: 0px;
+  stroke-opacity: 0;
+  opacity: 0.7;
+  transform: scale(-1, 1);
+}
+
+path {
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
 
 /*# sourceMappingURL=main.css.map */
