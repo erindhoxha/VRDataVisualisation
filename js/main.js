@@ -1,21 +1,17 @@
 
-$(".image-scale").mouseover(function () {
-    var id = $(this).find('img').attr('id');
-    $("#overlay-" + id).css('opacity', '1');
-});
-
-$(".image-scale").mouseleave(function () {
-    var id = $(this).find('img').attr('id');
-    $("#overlay-" + id).css('opacity', '0');
-});
 
 
-jQuery.extend(jQuery.easing, {
-    easeInOutQuad: function (x, t, b, c, d) {
-        if ((t /= d / 2) < 1) return c / 2 * t * t + b;
-        return -c / 2 * ((--t) * (t - 2) - 1) + b;
-    }
-});
+
+//Illustration By Rick Granados
+
+
+jQuery.extend(jQuery.easing,
+    {
+        easeInOutQuad: function (x, t, b, c, d) {
+            if ((t /= d / 2) < 1) return c / 2 * t * t + b;
+            return -c / 2 * ((--t) * (t - 2) - 1) + b;
+        }
+    });
 
 function SVG(tag) {
     return document.createElementNS('http://www.w3.org/2000/svg', tag);
@@ -44,19 +40,23 @@ function replaceRectsWithPaths(parentElement) {
             .insertAfter(this);
 
     });
+
     $(rects).remove();
 }
-
 function replaceLinesWithPaths(parentElement) {
 
     var lines = $(parentElement).find('line');
 
     $.each(lines, function () {
+
         var lineX1 = $(this).attr('x1');
         var lineY1 = $(this).attr('y1');
+
         var lineX2 = $(this).attr('x2');
         var lineY2 = $(this).attr('y2');
+
         var convertedPath = 'M' + lineX1 + ',' + lineY1 + ' ' + lineX2 + ',' + lineY2;
+
 
         $(SVG('path'))
             .attr('d', convertedPath)
@@ -65,12 +65,16 @@ function replaceLinesWithPaths(parentElement) {
             .attr('stroke-width', $(this).attr('stroke-width'))
             .attr('stroke-linecap', $(this).attr('stroke-linecap'))
             .insertAfter(this);
+
     });
+
     $(lines).remove();
 }
 
 function replaceCirclesWithPaths(parentElement) {
+
     var circles = $(parentElement).find('circle');
+
     $.each(circles, function () {
 
         var cX = $(this).attr('cx');
@@ -116,6 +120,7 @@ function replaceEllipsesWithPaths(parentElement) {
             .insertAfter(this);
 
     });
+
     $(ellipses).remove();
 }
 
@@ -139,6 +144,7 @@ function replacePolygonsWithPaths(parentElement) {
             .insertAfter(this);
 
     });
+
     $(polygons).remove();
 }
 
@@ -164,9 +170,13 @@ function replacePolylinesWithPaths(parentElement) {
 }
 
 function hideSVGPaths(parentElement) {
+
     var paths = $(parentElement).find('path');
+
     $.each(paths, function () {
+
         var totalLength = this.getTotalLength();
+
         $(this).css({
             'stroke-dashoffset': totalLength,
             'stroke-dasharray': totalLength + ' ' + totalLength
@@ -179,7 +189,9 @@ function drawSVGPaths(_parentElement, _timeMin, _timeMax, _timeDelay) {
     var paths = $(_parentElement).find('path');
 
     $.each(paths, function (i) {
+
         var totalLength = this.getTotalLength();
+
         $(this).css({
             'stroke-dashoffset': totalLength,
             'stroke-dasharray': totalLength + ' ' + totalLength
@@ -204,11 +216,12 @@ function replaceWithPaths(parentElement) {
 }
 
 function startSVGAnimation(parentElement) {
-    drawSVGPaths(parentElement, 500, 700, 25);
+    drawSVGPaths(parentElement, 4500, 330, 0);
 }
+function startSVGAnimationText(parentElement) {
+    drawSVGPaths(parentElement, 2430, 100, 200);
+}
+
 replaceWithPaths($('svg'));
-
-startSVGAnimation($('#vr-glasses-outline'));
-
-
-
+startSVGAnimation($('#svg-headset'));
+startSVGAnimationText($('#text-100000'));

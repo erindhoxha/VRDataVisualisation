@@ -6,8 +6,10 @@
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-
- 
+$main-color: rgba(19, 165, 255, 0.721);
+$shadow-color:  rgba(46, 46, 46, 0.721);
+$orange: #FF5719;
+ @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700');
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -20,7 +22,32 @@
 }
     body {
         font-family:'Titillium Web';
-        background-color:black;
+        background-color:black !important;
+    }
+    #nav-side {
+        a {
+            padding:0px;
+            padding-right:20px;
+        }
+        li {
+            padding-right:10px;
+            padding:0px;
+        }
+        list-style-type:none;
+        right:-130px;
+        display:flex;
+        flex-direction: row;
+        transform:rotate(270deg);
+        justify-content: flex-end;
+        top:50%;
+        position:fixed;
+    }
+    .wrapper {
+        color:white;
+        z-index:999999999999999;
+        position:absolute;
+        width:100%;
+        height:100%;
     }
 
 /*
@@ -295,7 +322,11 @@ textarea {
     height:100vh;
     width:100%;
     background-color: #000000;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%234799f9' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%234799f9' fill-opacity='0.1' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.people-using-vr-rooms {
+     height:100vh;
+     width:100%;
 }
 .overlay-div {
     height:100%;
@@ -347,17 +378,7 @@ textarea {
      fill:white;
      background-color:blue;
 }
-.box-image {
-    background-image:url('https://images.pexels.com/photos/430207/pexels-photo-430207.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-    opacity:1;
-     -webkit-mask-box-image: url(../img/glasses3.svg);
-     background-size:cover;
-     background-position:center;
-    height:40%;
-    margin:0 auto;
-    margin-top:50px;
-    width:70%;
-}
+
 .first-div-box {
     img {
         width:200px;
@@ -382,18 +403,24 @@ textarea {
     font-weight:900;
     font-size:40px;
 }
+
+
 .vr-send {
     background-color:transparent;
-    border:2px solid rgba(19, 165, 255, 0.721);
+    border:2px solid $main-color;
     padding:10px 30px;
-    color:rgba(19, 165, 255, 0.721);
+    color:$main-color;
     font-weight:600;
     margin-top:10px;
     transition:0.3s ease-in;
+    box-shadow: 3px -3px $main-color,
+    2px -2px $main-color,
+    1px -1px $main-color;
+    border: 1px solid $main-color;
 }
 .vr-send:hover {
     color:black;
-    background-color:rgba(19, 165, 255, 0.721);
+    background-color:$main-color;
 }
 .stat-box {
     margin-top:50px;
@@ -409,21 +436,7 @@ textarea {
 #num-count {
      text-align:center; 
      font-size:80px;
-     color:rgba(19, 165, 255, 0.721);
-}
-.st0 {
-    fill: rgba(19, 165, 255, 0.721);
-    stroke-width: 1px;}
-#vr-glasses-outline {
-    position:absolute;
-    width:700px;
-    right:0;
-    bottom:20%;
-    stroke-width: 0px;
-    stroke-dasharray: 0px;
-    stroke-opacity: 0;
-    opacity:0.7;
-    transform: scale(-1, 1);
+     color:$main-color;
 }
 
 path {
@@ -433,3 +446,69 @@ path {
     stroke-miterlimit: 10;
 }
 
+
+.coolShadow {
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-shadow:
+        1px -1px 0 $shadow-color,
+        2px -2px 0 $shadow-color,
+        3px -3px 0 $shadow-color,
+        4px -4px 0 $shadow-color,
+}
+
+.st0-1 {
+    fill:white;
+
+}
+
+
+        #svg-headset {
+            position: absolute;
+            right: 0;
+            top:17%;
+            height: 100vh;
+            margin: auto;
+            display: block;
+            path {
+                fill: none;
+                stroke: $main-color;
+                stroke-width: 1;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-miterlimit: 10;
+
+                &.st1 {
+                    stroke-width: 2;
+                }
+            }
+        }
+
+        #text-100000 {
+            width: 400px;
+            display: block;
+            margin: 0 auto;
+             display: block;
+             path {
+                 fill: none;
+                 stroke: $main-color;
+                 stroke-width: 5;
+                 stroke-linecap: round;
+                 stroke-linejoin: round;
+                 stroke-miterlimit: 10;
+
+                 &.st1 {
+                     stroke-width: 2;
+                 }
+             }
+         }
+
+#myChart {
+    margin:0 auto;
+}
+.nav-top {
+    background-color:transparent;
+    color:white;
+    z-index:9999;
+}
