@@ -242,3 +242,13 @@ function startSVGAnimationText(parentElement) {
 replaceWithPaths($('svg'));
 startSVGAnimation($('#svg-headset'));
 startSVGAnimationText($('#text-100000'));
+
+$("#svg-australia").hide();
+$("#svg-new-zealand").hide();
+
+$(".australia-btn").on('click', function(){
+    $("#svg-australia").show();
+    $("#svg-new-zealand").show();
+    startSVGAnimationText($('#svg-australia'));
+    startSVGAnimationText($('#svg-new-zealand'));
+})
