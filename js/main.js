@@ -7,7 +7,18 @@ $(".vr-send").click(function () {
         'slow');
 });
 
+// scroll add active classes
 
+
+$(window).scroll(function () {
+    var offset = $(".people-using-vr-rooms").offset().top;
+
+    if ($(window).scrollTop() >= offset) {
+        $("#nav-link-1").css('color','white');
+    } else {
+        $("#nav-link-1").css('color', 'rgba(19, 165, 255, 0.721)');
+    }
+});
 //Illustration By Rick Granados
 
 
