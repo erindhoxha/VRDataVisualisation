@@ -463,6 +463,23 @@ path {
     #stLiberty path.st1 {
       stroke-width: 1; }
 
+#whiteHouse {
+  position: absolute;
+  height: 30vh;
+  display: block;
+  right: 8%;
+  margin-bottom: 20px;
+  z-index: -1; }
+  #whiteHouse path {
+    fill: none;
+    stroke: rgba(19, 165, 255, 0.721);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10; }
+    #whiteHouse path.st1 {
+      stroke-width: 1; }
+
 #svg-australia {
   position: absolute;
   height: 500px;

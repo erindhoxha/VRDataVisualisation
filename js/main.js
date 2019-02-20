@@ -249,6 +249,7 @@ $("#svg-new-zealand").hide();
 $("#svg-europe").hide();
 $("#svg-europe-flag").hide();
 $("#stLiberty").hide();
+$("#whiteHouse").hide();
 
 function startSVGAnimationEurope(parentElement) {
     drawSVGPaths(parentElement, 900, 222, 100);
@@ -259,6 +260,7 @@ $(".australia-btn").on('click', function(){
     $("#svg-new-zealand").show();
     $("#svg-europe").fadeOut(300);
     $("#stLiberty").fadeOut(300);
+    $("#whiteHouse").fadeOut(300);
     $("#svg-europe-flag").fadeOut(300);
     $(".myChart").attr('id', 'myChart');
     $("#myChart").show();
@@ -278,10 +280,12 @@ $(".europe-btn").on('click', function() {
     $("#svg-australia").fadeOut(300);
     $("#svg-new-zealand").fadeOut(300);
     $("#stLiberty").fadeOut(300);
+    $("#whiteHouse").fadeOut(300);
 })
 
 $(".america-btn").on('click', function(){
     $("#stLiberty").show();
+    $("#whiteHouse").show();
     $(".myChart").attr('id', 'myChart');
     $("#myChart").show();
     $("#svg-australia").fadeOut(300);
@@ -290,6 +294,7 @@ $(".america-btn").on('click', function(){
     $("#svg-europe-flag").fadeOut(300);
     addChartForAustralia();
     startSVGAnimationEurope($('#stLiberty'));
+    startSVGAnimationEurope("#whiteHouse");
 });
 
 function addChartForEurope() {
