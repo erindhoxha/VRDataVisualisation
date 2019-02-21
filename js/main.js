@@ -12,11 +12,23 @@ $(".vr-send").click(function () {
 
 $(window).scroll(function () {
     var offset = $(".people-using-vr-rooms").offset().top;
-
+    var offset2 = $(".container-flash").offset().top;
     if ($(window).scrollTop() >= offset) {
         $("#nav-link-1").css('color','white');
+        $("#nav-link").css('color','rgba(19, 165, 255, 0.721)');
     } else {
         $("#nav-link-1").css('color', 'rgba(19, 165, 255, 0.721)');
+    }
+});
+
+$(window).scroll(function () {
+    var offset2 = $(".container-flash").offset().top;
+    if ($(window).scrollTop() >= offset2) {
+        $("#nav-link-1").css('color', 'rgba(19, 165, 255, 0.721)');
+        $("#nav-link-2").css('color','white');
+        $("#nav-link").css('color','rgba(19, 165, 255, 0.721)');
+    } else {
+        $("#nav-link-2").css('color', 'rgba(19, 165, 255, 0.721)');
     }
 });
 //Illustration By Rick Granados
