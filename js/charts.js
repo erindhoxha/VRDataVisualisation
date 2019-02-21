@@ -8,15 +8,22 @@ function addChartForAustralia() {
         datasets: [{
           label: '# of Votes',
           data: [15, 11, 5, 12, 24],
-          backgroundColor: [
-            'rgba(19, 165, 255, 0.721)',
-            'rgba(28, 28, 184, 0.721)',
-            'rgba(212, 119, 184, 0.721)',
-            'rgba(22, 221, 184, 0.721)',
-            'rgba(22, 221, 11, 0.721)',
-          ],
-          borderColor: [
-          ],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.4)',
+                'rgba(54, 162, 235, 0.4)',
+                'rgba(255, 206, 86,0.4)',
+                'rgba(75, 192, 192,0.4)',
+                'rgba(153, 102, 255,0.4)',
+                'rgba(255, 159, 64,0.4)'
+              ],
+              borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+              ],
           borderWidth: 0
         }]
       },
@@ -64,15 +71,22 @@ function addChartForEurope() {
       datasets: [{
         label: '# of Votes',
         data: [15, 11, 5, 12, 24],
-        backgroundColor: [
-          'rgba(19, 165, 255, 0.721)',
-          'rgba(28, 28, 184, 0.721)',
-          'rgba(212, 119, 184, 0.721)',
-          'rgba(22, 221, 184, 0.721)',
-          'rgba(22, 221, 11, 0.721)',
-        ],
-        borderColor: [
-        ],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.4)',
+                'rgba(54, 162, 235, 0.4)',
+                'rgba(255, 206, 86,0.4)',
+                'rgba(75, 192, 192,0.4)',
+                'rgba(153, 102, 255,0.4)',
+                'rgba(255, 159, 64,0.4)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
         borderWidth: 0
       }]
     },
@@ -114,15 +128,22 @@ function addChartForAmerica() {
       datasets: [{
         label: '# of Votes',
         data: [15, 11, 5, 12, 24],
-        backgroundColor: [
-          'rgba(19, 165, 255, 0.721)',
-          'rgba(28, 28, 184, 0.721)',
-          'rgba(212, 119, 184, 0.721)',
-          'rgba(22, 221, 184, 0.721)',
-          'rgba(22, 221, 11, 0.721)',
-        ],
-        borderColor: [
-        ],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.4)',
+                'rgba(54, 162, 235, 0.4)',
+                'rgba(255, 206, 86,0.4)',
+                'rgba(75, 192, 192,0.4)',
+                'rgba(153, 102, 255,0.4)',
+                'rgba(255, 159, 64,0.4)'
+              ],
+              borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+              ],
         borderWidth: 0
       }]
     },
@@ -165,15 +186,22 @@ function addChartForAsia() {
       datasets: [{
         label: '# of Votes',
         data: [20, 10, 4, 2],
-        backgroundColor: [
-          'rgba(19, 165, 255, 0.721)',
-          'rgba(28, 28, 184, 0.721)',
-          'rgba(212, 119, 184, 0.721)',
-          'rgba(22, 221, 184, 0.721)',
-          'rgba(22, 221, 11, 0.721)',
-        ],
-        borderColor: [
-        ],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.4)',
+                'rgba(54, 162, 235, 0.4)',
+                'rgba(255, 206, 86,0.4)',
+                'rgba(75, 192, 192,0.4)',
+                'rgba(153, 102, 255,0.4)',
+                'rgba(255, 159, 64,0.4)'
+              ],
+              borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+              ],
         borderWidth: 0
       }]
     },
