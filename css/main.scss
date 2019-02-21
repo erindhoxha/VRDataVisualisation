@@ -53,6 +53,10 @@ $orange: #FF5719;
     a:-webkit-any-link {
         text-decoration: none;
     }
+    .text-percent {
+        color:$main-color;
+        font-size:4em;
+    }
     #nav-side {
         a {
             padding:0px;
@@ -68,7 +72,9 @@ $orange: #FF5719;
             padding:0px;
         }
         list-style-type:none;
-        right:-130px;
+        right:-180px;
+        background-color:black;
+        padding:10px;
         display:flex;
         flex-direction: row;
         transform:rotate(270deg);
@@ -76,6 +82,7 @@ $orange: #FF5719;
         top:50%;
         position:fixed;
     }
+
     .wrapper {
         color:white;
         z-index:999999999999999;
@@ -373,7 +380,7 @@ textarea {
     justify-content: center;
     align-items: center;
     height:100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) -7%, rgba(0, 0, 0, 0.7) 80.00%, rgba(0, 0, 0, 1) 100.00%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) -7%, rgba(0, 0, 0, 0.7) 80.00%, rgba(0, 0, 0, 1) 100.00%);
 }
 .overlay-div2 {
     height:100%;
@@ -600,7 +607,6 @@ path {
     left:10%;
     margin-bottom:20px;
     z-index:-1;
-    opacity:1;
     path {
         fill: none;
         stroke: $main-color;
@@ -856,9 +862,20 @@ body {
   display: inline-block;
   vertical-align: middle;
 }
+body::before {
+    content:"";
+    position:fixed;
+    width:100%;
+    height:80px;
+    background-color:black;
+    top:0;
+    z-index:2;
+}
 
 .inlined {
   width: 90%;
+  opacity:0.7;
+  z-index:3;
 }
 
 /**

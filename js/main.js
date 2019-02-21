@@ -1,31 +1,29 @@
-
 // scroll add active classes
-
-
 $(window).scroll(function () {
-    var offset = $(".people-using-vr-rooms").offset().top;
+    var offset = $(".vr-send").offset().top;
     if ($(window).scrollTop() >= offset) {
         $("#nav-link-1").css('color','white');
+        $("#nav-link").css('color', 'rgba(19, 165, 255, 0.721)');
         activate(2);
-        $("#nav-link").css('color','rgba(19, 165, 255, 0.721)');
     } else {
         activate(1);
+        $("#nav-link").css('color','white');
         $("#nav-link-1").css('color', 'rgba(19, 165, 255, 0.721)');
     }
-});
 
-$(window).scroll(function () {
     var offset2 = $(".container-flash").offset().top;
     if ($(window).scrollTop() >= offset2) {
         $("#nav-link-1").css('color', 'rgba(19, 165, 255, 0.721)');
         $("#nav-link-2").css('color','white');
+        activate(3);
+
+    startSVGAnimationEurope("#ar");
+    startSVGAnimationEurope("#ar2");
         $("#nav-link").css('color','rgba(19, 165, 255, 0.721)');
     } else {
         $("#nav-link-2").css('color', 'rgba(19, 165, 255, 0.721)');
     }
 });
-//Illustration By Rick Granados
-
 
 jQuery.extend(jQuery.easing,
     {
@@ -187,7 +185,6 @@ function replacePolylinesWithPaths(parentElement) {
             .insertAfter(this);
 
     });
-
     $(polylines).remove();
 }
 
@@ -402,15 +399,19 @@ $(".vr-send").click(function () {
     }
   };
 
-  $points.on('click', 'li', function(event) {
-    var _index;
-    _index  = $point_arr.index(this);
-    tracker = _index === 0 ? 1 : _index === val ? 0 : tracker;
-    
-    return activate(_index);
-  });
+startSVGAnimationEurope("#ar");
+startSVGAnimationEurope("#ar2");
 
+function scrollTo(classOrId, idToGo) {
+    $(classOrId).on('click', function(){
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $(idToGo).offset().top
+        }, 1000);
+    })
+}
 
-
+scrollTo(".prog-2", ".people-using-vr-rooms");
+scrollTo(".prog-1", ".first-div-info");
+scrollTo(".prog-3", "#container-flash");
 
 

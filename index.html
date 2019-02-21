@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <meta name="theme-color" content="#fafafa">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -101,7 +102,7 @@
 </div>
     <div class="overlay-div" style="transform: translateZ(20px);">
       <div class="first-div-box text-white">
-        <div class="row">
+        <div class="row" data-aos="fade-right">
           <div class="col-lg-12 text-left" style="transform: translateZ(20px);">
               <img id="img-logo" src="img/vr-logo3d3d-01.png" alt="">
           </div>
@@ -778,11 +779,11 @@
 	</g>
 </g>
 </svg>
-<div class="number text-center">334343</div>
+<div class="number text-center" data-aos="fade-up">334343</div>
 
-<h1 class="text-white text-center vr-stat-number underline" style="z-index:9999">open VR Rooms across the world.</h1>
+<h1 class="text-white text-center vr-stat-number underline" data-aos="fade-up" style="z-index:9999">open VR Rooms across the world.</h1>
       </div>
-	  <canvas id="myChart" class="myChart" width="400" height="100"></canvas>
+	  <canvas id="myChart" data-aos="fade-up" class="myChart" width="400" height="100"></canvas>
 	  <canvas id="myChartEurope" class="myChartEurope" width="400" height="100" style="display:none"></canvas>
 	  <canvas id="myChartAmerica" class="myChartAmerica" width="400" height="100" style="display:none"></canvas>
 	  <canvas id="myChartAsia" class="myChartAsia" width="400" height="100" style="display:none"></canvas>
@@ -807,9 +808,16 @@
 				Reality creates an artificial environment to inhabit.</p>
 		</div>
 		<div class="row">
-			<div class="col-lg-6 js-tilt" style="transform-style: preserve-3d" data-tilt-axis="xy" data-tilt-perspective="1000"
-			data-tilt-speed="400">
-				<p class="text-white text-center pt-5 mt-5" style="width:80%; margin:0 auto;">In Augmented Reality, the computer uses sensors and algorithms to determine the position and orientation of a camera.
+			<div class="col-lg-6 ag-box" 
+			data-aos="fade-right" 
+			data-aos-offset="200"
+			data-aos-delay="0"
+			data-aos-duration="1000"
+			data-aos-easing="ease-in-out"
+			data-aos-mirror="true"
+			data-aos-once="false">
+			<h1 class="pt-5 mt-5 text-center text-percent">37%</h1>
+				<p class="text-white text-center" style="width:60%; margin:0 auto;">In Augmented Reality, the computer uses sensors and algorithms to determine the position and orientation of a camera.
 				AR technology then renders the 3D graphics as they would appear from the viewpoint of the camera, superimposing the
 				computer-generated images over a user’s view of the real world.</p class="text-white text-center pt-5 mt-5" style="width:80%; margin:0 auto;">
 				<svg style="transform: translateZ(180px); transform:scale(-1,1)" version=" 1.1" id="ar" xmlns="http://www.w3.org/2000/svg"
@@ -1007,9 +1015,16 @@
 					</g>
 				</svg>
 			</div>
-			<div class="col-lg-6 js-tilt" style="transform-style: preserve-3d" data-tilt-axis="xy" data-tilt-perspective="1000"
-			data-tilt-speed="400">
-				<p class="text-white text-center pt-5 mt-5" style="width:80%; margin:0 auto;">In Augmented Reality, the computer uses
+			<div class="col-lg-6 " 
+			data-aos="fade-left"
+			data-aos-offset="200"
+			data-aos-delay="0"
+			data-aos-duration="1000"
+			data-aos-easing="ease-in-out"
+			data-aos-mirror="true"
+			data-aos-once="false">
+			<h1 class="pt-5 mt-5 text-center text-percent">63%</h1>			
+				<p class="text-white text-center" style="width:60%; margin:0 auto;">In Augmented Reality, the computer uses
 					sensors and algorithms to determine the position and orientation of a camera.
 					AR technology then renders the 3D graphics as they would appear from the viewpoint of the camera, superimposing the
 					computer-generated images over a user’s view of the real world.</p class="text-white text-center pt-5 mt-5" style="width:80%; margin:0 auto;">
@@ -1226,7 +1241,6 @@
 
 <div class="inliner"></div>
 <div class="inlined">
-  
   <!-- Start component -->
   <div class="progress-meter">
     <div class="track">
@@ -1267,6 +1281,10 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+	AOS.init();
+  </script>
 </body>
 
 </html>
