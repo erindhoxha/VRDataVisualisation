@@ -253,7 +253,12 @@ function startSVGAnimationEurope(parentElement) {
     drawSVGPaths(parentElement, 900, 222, 100);
 }
 
+
+
+
 $(".australia-btn").on('click', function(){
+    $("#myChartEurope, #myChartAmerica, #myChartAsia").hide();
+    $("#myChart").show();
     $(".buttons-box button").removeClass('active');
     $(".australia-btn").addClass('active'); 
     $("#svg-australia").show();
@@ -262,21 +267,19 @@ $(".australia-btn").on('click', function(){
     $("#stLiberty").fadeOut(300);
     $("#whiteHouse").fadeOut(300);
     $("#svg-europe-flag").fadeOut(300);
-    $(".myChart").attr('id', 'myChart');
-    $("#myChart").show();
     addChartForAustralia();
     startSVGAnimationText($('#svg-australia'));
     startSVGAnimationText($('#svg-new-zealand'));
 })
 
 $(".europe-btn").on('click', function() {
+    $("#myChart, #myChartAmerica, #myChartAsia").hide();
+    $("#myChartEurope").show();
     $(".buttons-box button").removeClass('active');
     $(".europe-btn").addClass('active');
-    $(".myChart").attr('id', 'myChart');
-    $("#myChart").show();
     $("#svg-europe").show();
+    addChartForEurope();
     $("#svg-europe-flag").show();
-    addChartForEurope()
     startSVGAnimationEurope("#svg-europe");
     startSVGAnimationEurope("#svg-europe-flag");
     $("#svg-australia").fadeOut(300);
@@ -286,12 +289,13 @@ $(".europe-btn").on('click', function() {
 })
 
 $(".america-btn").on('click', function(){
+    $("#myChart, #myChartEurope, #myChartAsia").hide();
+    $("#myChartAmerica").show();
     $(".buttons-box button").removeClass('active');
     $(".america-btn").addClass('active');
     $("#stLiberty").show();
+    addChartForAmerica();
     $("#whiteHouse").show();
-    $(".myChart").attr('id', 'myChart');
-    $("#myChart").show();
     $("#svg-australia").fadeOut(300);
     $("#svg-new-zealand").fadeOut(300);
     $("#svg-europe").fadeOut(300);
@@ -301,55 +305,9 @@ $(".america-btn").on('click', function(){
     startSVGAnimationEurope("#whiteHouse");
 });
 $(".asia-btn").on('click', function() {
+    $("#myChart, #myChartAmerica, #myChartEurope").hide();
+    $("#myChartAsia").show();
+    addChartForAsia();
     $(".buttons-box button").removeClass('active');
     $(".asia-btn").addClass('active');
 })
-function addChartForEurope() {
-    var ctx = document.getElementById("myChart").getContext('2d');
-    var myChart = new Chart(ctx, {
-      type: 'doughnut',
-      data: {
-      labels: 
-        ['Auckland', 'Wellington', 'Hamilton', 'Dunedin', 'Christchurch'],
-        datasets: [{
-          label: '# of Votes',
-          data: [15, 11, 5, 12, 24],
-          backgroundColor: [
-            'rgba(19, 165, 255, 0.721)',
-            'rgba(28, 28, 184, 0.721)',
-            'rgba(212, 119, 184, 0.721)',
-            'rgba(22, 221, 184, 0.721)',
-            'rgba(22, 221, 11, 0.721)',
-          ],
-          borderColor: [
-          ],
-          borderWidth: 0
-        }]
-      },
-      options: {
-        layout: {
-          padding: 30,
-          left: 10,
-          top: 5,
-        },
-        scales: {
-          yAxes: [{
-            ticks: {
-              padding: 25,
-              beginAtZero: true,
-              display: false
-            },
-            display:false,
-          }]
-        }
-      },
-      layout: {
-        padding: {
-          left:50,
-          top:50,
-          bottom:0,
-          right:0
-        }
-      }
-    });
-}
