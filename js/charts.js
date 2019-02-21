@@ -48,3 +48,9 @@ function addChartForAustralia() {
       }
     });
 }
+
+$("#svg-australia").show();
+$("#svg-new-zealand").show();
+$(".myChart").attr('id', 'myChart');
+$("#myChart").show();
+addChartForAustralia();

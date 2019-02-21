@@ -446,7 +446,11 @@ textarea {
     font-weight:600;
     margin-top:10px;
     transition:0.3s ease-in;
-    box-shadow: 3px -3px $main-color,
+    box-shadow: 
+    6px -6px $main-color,
+    5px -5px $main-color,
+    4px -4px $main-color,
+    3px -3px $main-color,
     2px -2px $main-color,
     1px -1px $main-color;
     border: 1px solid $main-color;
@@ -663,5 +667,8 @@ button:active {
     outline: none;
     border: none;
     }
-    
+.active {
+    background-color:$main-color !important;
+    color:black !important;
+}
 button:focus {outline:0 !important;}
