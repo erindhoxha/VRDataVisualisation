@@ -57,7 +57,7 @@ $(".myChart").attr('id', 'myChart');
 function addChartForEurope() {
   var ctx = document.getElementById("myChartEurope").getContext('2d');
   var myChart = new Chart(ctx, {
-    type: 'doughnut',
+    type: 'pie',
     data: {
     labels: 
       ['Auckland', 'Wellington', 'Hamilton', 'Dunedin', 'Christchurch'],
@@ -156,15 +156,15 @@ function addChartForAmerica() {
 
 
 function addChartForAsia() {
-  var ctx = document.getElementById("myChartAsia").getContext('2d');
-  var myChart = new Chart(ctx, {
-    type: 'doughnut',
+  var myNewChart = document.getElementById("myChartAsia").getContext('2d');
+  var myChart = new Chart(myNewChart, {
+    type: 'pie',
     data: {
     labels: 
       ['Auckland', 'Wellington', 'Hamilton', 'Dunedin', 'Christchurch'],
       datasets: [{
         label: '# of Votes',
-        data: [15, 11, 5, 12, 24],
+        data: [20, 10, 4, 2],
         backgroundColor: [
           'rgba(19, 165, 255, 0.721)',
           'rgba(28, 28, 184, 0.721)',
@@ -183,14 +183,18 @@ function addChartForAsia() {
         left: 10,
         top: 5,
       },
+      gridLines: {
+        display: false
+     },
       scales: {
+        display:false,
         yAxes: [{
           ticks: {
+            maxTicksLimit: 3,
             padding: 100,
             beginAtZero: true,
             display: false
           },
-          display:false,
         }]
       }
     },
@@ -203,4 +207,5 @@ function addChartForAsia() {
       }
     }
   });
+  myNewChart.options.legend.display = false; 
 }

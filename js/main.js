@@ -305,9 +305,10 @@ $(".america-btn").on('click', function(){
     startSVGAnimationEurope("#whiteHouse");
 });
 $(".asia-btn").on('click', function() {
+    $(".buttons-box button").removeClass('active');
+    $(".asia-btn").addClass('active');
     $("#myChart, #myChartAmerica, #myChartEurope").hide();
     $("#myChartAsia").show();
     addChartForAsia();
-    $(".buttons-box button").removeClass('active');
-    $(".asia-btn").addClass('active');
+
 })
