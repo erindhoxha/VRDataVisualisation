@@ -1,9 +1,15 @@
 // scroll add active classes
+scrolled = false;
 $(window).scroll(function () {
     var offset = $(".vr-send").offset().top;
     if ($(window).scrollTop() >= offset) {
         $("#nav-link-1").css('color','white');
         $("#nav-link").css('color', 'rgba(19, 165, 255, 0.721)');
+        if (scrolled == false) {
+            $('.number').eq(0).text($('.number').attr('data-number'));
+            Counter($('.number').eq(0));s
+        }
+        var scrolled = true;
         activate(2);
     } else {
         activate(1);

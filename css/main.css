@@ -14,7 +14,8 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
-  font-family: 'Titillium Web'; }
+  font-family: 'Titillium Web';
+  box-sizing: border-box; }
 
 .buttons-box {
   margin: 0 auto;
@@ -834,5 +835,50 @@ body::before {
   background-image: -moz-linear-gradient(#bbbbbb, #959595);
   background-image: -webkit-linear-gradient(#bbbbbb, #959595);
   background-image: linear-gradient(#bbbbbb, #959595); }
+
+#img-vr {
+  width: 100%;
+  background-attachment: fixed;
+  mask-image: url(../img/brush.svg);
+  -webkit-mask-image: url(../img/brush.svg);
+  mask-repeat: no-repeat;
+  mask-mode: alpha;
+  mask-size: 80%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-mode: alpha;
+  -webkit-mask-size: 100%; }
+
+.parallax {
+  /* The image used */
+  background-image: url(../img/bg-vr-headsets\ copy.png);
+  /* Set a specific height */
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  mask-image: url(../img/brush.svg);
+  -webkit-mask-image: url(../img/brush.svg);
+  mask-repeat: no-repeat;
+  mask-mode: alpha;
+  mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-mode: alpha;
+  -webkit-mask-size: 100%;
+  overflow: hidden; }
+
+.parallax-box {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  mask-image: url(../img/brush.svg);
+  -webkit-mask-image: url(../img/brush.svg);
+  background-image: url(../img/abstract.jpeg);
+  height: 100%; }
+
+.parallax-wrapper {
+  height: 100vh; }
 
 /*# sourceMappingURL=main.css.map */
