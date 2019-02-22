@@ -621,6 +621,7 @@ path {
     }
 }
 #whiteHouse {
+        max-width:100%;
     position: absolute;
     display:none;
     opacity:1;
@@ -641,6 +642,7 @@ path {
     }
 }
 #svg-australia {
+    max-width:100%;
     position: absolute;
     opacity:1;
     height: 500px;
@@ -661,6 +663,7 @@ path {
 }
 
 #svg-europe {
+        max-width:100%;
     left:3%;
     position: absolute;
     opacity:1;
@@ -679,7 +682,8 @@ path {
         }
     }
 }
-#ar, #ar2 {
+#ar, #ar2 ,#ar3, #ar4 {
+        max-width:100%;
       opacity:1;
       height: 300px;
       display: block;
@@ -1022,7 +1026,7 @@ body::before {
 
 .parallax {
     /* The image used */
-    background-image: url(../img/bg-vr-headsets\ copy.png);
+    background-image: url('../img/bg-vr-headsets\ copy.png');
     /* Set a specific height */
     height:100%;
     /* Create the parallax scrolling effect */
@@ -1059,3 +1063,18 @@ body::before {
   .parallax-wrapper {
       height:100vh;
   }
+
+
+//   RESPONSIVE MEDIA
+
+@media only screen and (max-width: 1024px) {
+    #nav-side {
+        display:none;
+    }
+    .parallax-wrapper {
+        display:none;
+    }
+    h1 {
+        font-size:25px !important;
+    }
+}
