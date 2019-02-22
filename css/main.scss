@@ -679,7 +679,7 @@ path {
         }
     }
 }
-#ar, #ar2 {
+#ar, #ar2, #ar3, #ar4 {
       opacity:1;
       height: 300px;
       display: block;
@@ -1022,7 +1022,7 @@ body::before {
 
 .parallax {
     /* The image used */
-    background-image: url(../img/bg-vr-headsets\ copy.png);
+    background-image: url('../img/bg-vr-headsets\ copy.png');
     /* Set a specific height */
     height:100%;
     /* Create the parallax scrolling effect */
@@ -1059,3 +1059,15 @@ body::before {
   .parallax-wrapper {
       height:100vh;
   }
+svg {
+    max-width:100% !important;
+}
+
+@media only screen and (max-width: 1024px) {
+    #nav-side {
+        display:none;
+    }
+    h1 {
+        font-size:25px !important;
+    }
+}
