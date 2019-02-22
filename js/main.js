@@ -17,7 +17,7 @@ $(window).scroll(function () {
         $("#nav-link-1").css('color', 'rgba(19, 165, 255, 0.721)');
     }
 
-    var offset2 = $(".container-flash").offset().top;
+    var offset2 = $("#container-flash").offset().top;
     if ($(window).scrollTop() >= offset2) {
         $("#nav-link-1").css('color', 'rgba(19, 165, 255, 0.721)');
         $("#nav-link-2").css('color','white');

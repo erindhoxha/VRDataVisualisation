@@ -43,13 +43,14 @@ $orange: #FF5719;
         color:black;
     }
     margin:0 auto;
-    width:50%;
+    width:100%;
     text-align:center;
 }
     body {
         font-family:'Titillium Web';
         background-color:black !important;
         overflow-x:hidden;
+        height:100%;
     }
     a:-webkit-any-link {
         text-decoration: none;
@@ -682,8 +683,7 @@ path {
         }
     }
 }
-#ar, #ar2 ,#ar3, #ar4 {
-        max-width:100%;
+#ar, #ar2, #ar3, #ar4 {
       opacity:1;
       height: 300px;
       display: block;
@@ -1063,22 +1063,28 @@ body::before {
   .parallax-wrapper {
       height:100vh;
   }
-
-
-//   RESPONSIVE MEDIA
+svg {
+    max-width:100% !important;
+}
 
 @media only screen and (max-width: 1024px) {
     #nav-side {
         display:none;
     }
-    .parallax-wrapper {
-        display:none;
-    }
     h1 {
         font-size:25px !important;
     }
-        [data-aos-delay] {
-            transition-delay: 0 !important;
-        }
+    .buttons-box {
+        width:50%;
+        margin-top:20px;
+    }
+    .number {
+        font-size:20px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    canvas {
+        width: 375px;
+    }
 }
 

@@ -21,7 +21,7 @@ html {
 
 .buttons-box {
   margin: 0 auto;
-  width: 50%;
+  width: 100%;
   text-align: center;
 }
 .buttons-box button {
@@ -45,6 +45,7 @@ body {
   font-family: "Titillium Web";
   background-color: black !important;
   overflow-x: hidden;
+  height: 100%;
 }
 
 a:-webkit-any-link {
@@ -634,7 +635,6 @@ path {
 }
 
 #ar, #ar2, #ar3, #ar4 {
-  max-width: 100%;
   opacity: 1;
   height: 300px;
   display: block;
@@ -1032,12 +1032,12 @@ body::before {
   height: 100vh;
 }
 
+svg {
+  max-width: 100% !important;
+}
+
 @media only screen and (max-width: 1024px) {
   #nav-side {
-    display: none;
-  }
-
-  .parallax-wrapper {
     display: none;
   }
 
@@ -1045,8 +1045,18 @@ body::before {
     font-size: 25px !important;
   }
 
-  [data-aos-delay] {
-    transition-delay: 0 !important;
+  .buttons-box {
+    width: 50%;
+    margin-top: 20px;
+  }
+
+  .number {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  canvas {
+    width: 375px;
   }
 }
 
