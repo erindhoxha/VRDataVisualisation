@@ -419,5 +419,17 @@ function scrollTo(classOrId, idToGo) {
 scrollTo(".prog-2", ".people-using-vr-rooms");
 scrollTo(".prog-1", ".first-div-info");
 scrollTo(".prog-3", "#container-flash");
+scrollTo("#nav-link", ".first-div-info");
+scrollTo("#nav-link-1", ".people-using-vr-rooms");
 
 
+var games = [];
+for (var i = 1; i < 11; i++) {
+    games.push(`../img/vrgame${i}.jpg`);
+}
+$(".change-game").on('click', function() {
+    $(".parallax-box").removeClass('animated bounceIn');
+    var randomNumber = Math.floor(Math.random() * 9);
+    $(".parallax-box").css('background-image', `url(${games[randomNumber]})`)
+    $(".parallax-box").addClass(' animated bounceIn');
+})

@@ -345,7 +345,7 @@ h3 {
   justify-content: center;
   align-items: center;
   height: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) -7%, rgba(0, 0, 0, 0.7) 80%, black 100%);
+  background: linear-gradient(180deg, black -7%, rgba(0, 0, 0, 0.7) 10%, black 100%);
 }
 
 .overlay-div2 {
@@ -992,17 +992,14 @@ body::before {
 
 .parallax {
   /* The image used */
-  background-image: url("../img/bg-vr-headsets copy.png");
+  background-image: url("../img/vr-headsets.png");
   /* Set a specific height */
   height: 100%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
   background-attachment: fixed;
-  mask-image: url(../img/brush.svg);
-  -webkit-mask-image: url(../img/brush.svg);
   mask-repeat: no-repeat;
   mask-mode: alpha;
   mask-size: 100%;
@@ -1016,9 +1013,7 @@ body::before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  mask-image: url(../img/brush.svg);
-  -webkit-mask-image: url(../img/brush.svg);
-  background-image: url(../img/vrsplit.png);
+  background-image: url(../img/vrgame.jpg);
   mask-repeat: no-repeat;
   mask-mode: alpha;
   mask-size: 100%;
@@ -1029,7 +1024,7 @@ body::before {
 }
 
 .parallax-wrapper {
-  height: 100vh;
+  height: 83vh;
 }
 
 svg {
@@ -1058,6 +1053,24 @@ svg {
   canvas {
     width: 375px;
   }
+}
+.change-game {
+  bottom: 0%;
+  left: 44%;
+  background-color: transparent;
+  border: 2px solid rgba(19, 165, 255, 0.721);
+  padding: 10px 30px;
+  color: rgba(19, 165, 255, 0.721);
+  font-weight: 600;
+  transition: 0.3s ease-in;
+  box-shadow: 6px -6px rgba(19, 165, 255, 0.721), 5px -5px rgba(19, 165, 255, 0.721), 4px -4px rgba(19, 165, 255, 0.721), 3px -3px rgba(19, 165, 255, 0.721), 2px -2px rgba(19, 165, 255, 0.721), 1px -1px rgba(19, 165, 255, 0.721);
+  border: 1px solid rgba(19, 165, 255, 0.721);
+  position: absolute;
+}
+
+.change-game:hover {
+  background-color: rgba(19, 165, 255, 0.721);
+  color: black;
 }
 
 /*# sourceMappingURL=main.css.map */
