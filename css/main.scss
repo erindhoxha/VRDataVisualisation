@@ -1077,4 +1077,8 @@ body::before {
     h1 {
         font-size:25px !important;
     }
+        [data-aos-delay] {
+            transition-delay: 0 !important;
+        }
 }
+
