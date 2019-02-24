@@ -42,7 +42,6 @@ html {
 body {
   font-family: 'Titillium Web';
   background-color: black !important;
-  overflow-x: hidden;
   height: 100%; }
 
 a:-webkit-any-link {
@@ -306,7 +305,7 @@ textarea {
   justify-content: center;
   align-items: center;
   height: 100%;
-  background: linear-gradient(180deg, black -7%, rgba(0, 0, 0, 0.7) 10%, black 100%); }
+  background: linear-gradient(180deg, black -7%, rgba(0, 0, 0, 0.4) 10%, black 100%); }
 
 .overlay-div2 {
   height: 100%;
@@ -519,6 +518,7 @@ path {
   opacity: 1;
   height: 500px;
   display: block;
+  display: none;
   z-index: -1;
   left: 0; }
   #svg-australia path {
@@ -665,15 +665,10 @@ button:focus {
 /**
  * Style default tags
  */
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
 html, body {
-  height: 100%; }
-
-body {
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
   font-size: 14px;
   text-align: center; }
 
@@ -696,11 +691,9 @@ body {
   box-sizing: border-box; }
 
 html, body {
-  height: 100%; }
-
-body {
-  font-size: 14px;
-  text-align: center; }
+  width: 100%;
+  min-width: 100%;
+  display: block; }
 
 /**
  * Utility styles
@@ -897,7 +890,7 @@ svg {
   max-width: 100% !important; }
 
 @media only screen and (max-width: 1024px) {
-  #nav-side {
+  #nav-sidebar {
     display: none; }
 
   h1 {
@@ -916,6 +909,9 @@ svg {
   #myChartEnd {
     width: 1200px;
     height: 60%; } }
+@media only screen and (max-width: 768px) {
+  .parallax {
+    background-size: contain; } }
 .change-game {
   bottom: 0%;
   left: 44%;
@@ -946,6 +942,7 @@ svg {
   height: 40vh;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  border-top: 2px solid rgba(19, 165, 255, 0.721); }
 
 /*# sourceMappingURL=main.css.map */
