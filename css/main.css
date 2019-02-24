@@ -894,7 +894,13 @@ svg {
     display: none; }
 
   h1 {
-    font-size: 25px !important; }
+    font-size: 35px !important; }
+
+  p {
+    font-size: 21px; }
+
+  button {
+    font-size: 22px !important; }
 
   .buttons-box {
     width: 50%;
