@@ -22,6 +22,9 @@ $orange: #FF5719;
     font-family:'Titillium Web';
     box-sizing:border-box;
 }
+#myChartEnd {
+    margin-top:10%;
+}
 
 .buttons-box {
     button {
@@ -829,7 +832,10 @@ body {
   font-size: 14px;
   text-align: center;
 }
-
+.canvas-box {
+    width:40%;
+    margin:0 auto;
+}
 
 .inliner,
 .inliner + .inlined {
@@ -1086,6 +1092,10 @@ svg {
     canvas {
         width: 375px;
     }
+    #myChartEnd {
+        width:1200px;
+        height:60%;
+    }
 }
 
 .change-game {
@@ -1109,4 +1119,20 @@ svg {
 .change-game:hover {
     background-color:$main-color;
     color:black;
+}
+
+.btn-tell {
+    background-color:transparent;
+    border:2px solid $main-color;
+    color:$main-color;
+    padding:10px 20px;
+}
+.bg-info {
+    padding:10px;
+}
+.bg-tell-us-more {
+    height:40vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
