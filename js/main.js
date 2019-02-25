@@ -261,9 +261,6 @@ function startSVGAnimationEurope(parentElement) {
     drawSVGPaths(parentElement, 900, 222, 100);
 }
 
-
-
-
 $(".australia-btn").on('click', function(){
     $("#myChartEurope, #myChartAmerica, #myChartAsia").hide();
     $("#myChart").show();
@@ -407,7 +404,8 @@ $(".vr-send").click(function () {
 
 startSVGAnimationEurope("#ar");
 startSVGAnimationEurope("#ar2");
-
+startSVGAnimationEurope("#ar3");
+startSVGAnimationEurope("#ar4");
 function scrollTo(classOrId, idToGo) {
     $(classOrId).on('click', function(){
         $([document.documentElement, document.body]).animate({
@@ -428,8 +426,6 @@ for (var i = 1; i < 11; i++) {
     games.push(`../img/vrgame${i}.jpg`);
 }
 $(".change-game").on('click', function() {
-    $(".parallax-box").removeClass('animated bounceIn');
     var randomNumber = Math.floor(Math.random() * 9);
     $(".parallax-box").css('background-image', `url(${games[randomNumber]})`)
-    $(".parallax-box").addClass(' animated bounceIn');
 })

@@ -206,6 +206,19 @@ function addChartForAsia() {
       }]
     },
     options: {
+      tooltips: {
+        callbacks: {
+            labelColor: function(tooltipItem, chart) {
+                return {
+                    borderColor: 'rgb(255, 255, 255)',
+                    backgroundColor: 'rgb(255, 255, 255)'
+                }
+            },
+            labelTextColor:function(tooltipItem, chart){
+                return '#fff';
+            }
+          }
+      },
       layout: {
         padding: 30,
         left: 10,
@@ -237,3 +250,59 @@ function addChartForAsia() {
   });
   myNewChart.options.legend.display = false; 
 }
+
+
+
+var ctx = document.getElementById("myChartEnd").getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+  labels: 
+    ['2005', '2008', '2012', '2015', '2019'],
+    datasets: [{
+      label: 'Number of VR Rooms',
+      data: [2,4,5, 10, 15, 20],
+          backgroundColor: [
+              'rgba(19, 165, 255, 0.721))',
+              'rgba(19, 165, 255, 0.121))',
+              'rgba(19, 111, 255, 0.721))',
+              'rgba(75, 192, 192,0.4)',
+              'rgba(153, 102, 255,0.4)',
+              'rgba(255, 159, 64,0.4)'
+            ],
+      borderWidth: 0
+    }]
+  },
+  options: {
+    legend: {
+      display: false
+    },
+    layout: {
+      padding: 30,
+      left: 10,
+      top: 5,
+    },
+    gridLines: {
+      display: false
+   },
+    scales: {
+      display:false,
+      yAxes: [{
+        ticks: {
+          maxTicksLimit: 3,
+          padding: 100,
+          beginAtZero: true,
+          display: false
+        },
+      }]
+    }
+  },
+  layout: {
+    padding: {
+      left:50,
+      top:50,
+      bottom:0,
+      right:0
+    }
+  }
+});
