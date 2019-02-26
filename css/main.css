@@ -914,6 +914,13 @@ svg {
   max-width: 100% !important; }
 
 @media only screen and (max-width: 1024px) {
+  .vr-responsive-paragraph {
+    width: 80% !important;
+    font-size: 18px !important; }
+
+  .text-responsive {
+    width: 80%; }
+
   #nav-sidebar {
     display: none; }
 
@@ -927,7 +934,6 @@ svg {
     font-size: 22px !important; }
 
   .buttons-box {
-    width: 50%;
     margin-top: 20px; }
 
   .number {
@@ -940,6 +946,23 @@ svg {
     width: 1200px;
     height: 60%; } }
 @media only screen and (max-width: 768px) {
+  .h1 {
+    font-size: 23px !important;
+    width: 70% !important;
+    margin: 0 auto !important; }
+
+  .text-left {
+    font-size: 25px !important; }
+
+  .vr-responsive-paragraph {
+    font-size: 16px !important; }
+
+  .vr-send {
+    font-size: 16px !important; }
+
+  .text-responsive {
+    width: 90% !important; }
+
   .parallax {
     background-size: contain; } }
 .change-game {
@@ -978,5 +1001,18 @@ svg {
   height: 500px;
   background-color: rgba(19, 165, 255, 0.721);
   background: linear-gradient(180deg, rgba(19, 165, 255, 0.821) 0%, #13a5ff 50%, rgba(19, 165, 255, 0.8) 100%); }
+
+.text-responsive {
+  width: 60%;
+  margin: 0 auto; }
+
+.container-end {
+  margin-top: 115px; }
+
+.vr-responsive-paragraph {
+  width: 60%; }
+
+.stat-box-2 {
+  height: 100%; }
 
 /*# sourceMappingURL=main.css.map */
