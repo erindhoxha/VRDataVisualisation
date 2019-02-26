@@ -1106,7 +1106,6 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 2px solid rgba(19, 165, 255, 0.721);
 }
 
 #map {
