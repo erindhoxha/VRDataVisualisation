@@ -42,11 +42,11 @@ $(window).scroll(function () {
     }
 
 
-    var offset4 = $(".parallax-wrapper").offset().top;
-    if ($(window).scrollTop() >= offset3) {
+    var offset4 = $(".container-end").offset().top;
+    if ($(window).scrollTop() >= offset4) {
         $("#nav-link-2").css('color', 'rgba(19, 165, 255, 0.721)');
         $("#nav-link-3").css('color','white');
-        activate(4);
+        activate(5);
         $("#nav-link").css('color','rgba(19, 165, 255, 0.721)');
     } else {
         $("#nav-link-3").css('color', 'rgba(19, 165, 255, 0.721)');

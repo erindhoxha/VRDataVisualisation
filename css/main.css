@@ -549,20 +549,36 @@ path {
     #svg-europe path.st1 {
       stroke-width: 2; }
 
-#ar, #ar2, #ar3, #ar4 {
+#ar, #ar2 {
   opacity: 1;
   height: 300px;
   display: block;
   z-index: -1;
   margin: 0 auto; }
-  #ar path, #ar2 path, #ar3 path, #ar4 path {
+  #ar path, #ar2 path {
     fill: none;
     stroke: rgba(19, 165, 255, 0.721);
     stroke-width: 1;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-miterlimit: 10; }
-    #ar path.st1, #ar2 path.st1, #ar3 path.st1, #ar4 path.st1 {
+    #ar path.st1, #ar2 path.st1 {
+      stroke-width: 2; }
+
+#ar3, #ar4 {
+  opacity: 1;
+  height: 200px;
+  display: block;
+  z-index: -1;
+  margin: 30px auto; }
+  #ar3 path, #ar4 path {
+    fill: none;
+    stroke: rgba(19, 165, 255, 0.721);
+    stroke-width: 1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10; }
+    #ar3 path.st1, #ar4 path.st1 {
       stroke-width: 2; }
 
 #svg-europe-flag {
@@ -581,6 +597,14 @@ path {
     stroke-miterlimit: 10; }
     #svg-europe-flag path.st1 {
       stroke-width: 1; }
+
+.overlay-top {
+  text-align: center;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  background: linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0) 60%, black 80%, black 100%); }
 
 button:active {
   outline: none;
@@ -919,8 +943,9 @@ svg {
   .parallax {
     background-size: contain; } }
 .change-game {
-  bottom: 0%;
-  left: 44%;
+  position: absolute;
+  bottom: 50px;
+  margin-left: -80px;
   background-color: transparent;
   border: 2px solid rgba(19, 165, 255, 0.721);
   padding: 10px 30px;
@@ -928,8 +953,7 @@ svg {
   font-weight: 600;
   transition: 0.3s ease-in;
   box-shadow: 6px -6px rgba(19, 165, 255, 0.721), 5px -5px rgba(19, 165, 255, 0.721), 4px -4px rgba(19, 165, 255, 0.721), 3px -3px rgba(19, 165, 255, 0.721), 2px -2px rgba(19, 165, 255, 0.721), 1px -1px rgba(19, 165, 255, 0.721);
-  border: 1px solid rgba(19, 165, 255, 0.721);
-  position: absolute; }
+  border: 1px solid rgba(19, 165, 255, 0.721); }
 
 .change-game:hover {
   background-color: rgba(19, 165, 255, 0.721);
@@ -954,9 +978,5 @@ svg {
   height: 500px;
   background-color: rgba(19, 165, 255, 0.721);
   background: linear-gradient(180deg, rgba(19, 165, 255, 0.821) 0%, #13a5ff 50%, rgba(19, 165, 255, 0.8) 100%); }
-
-body {
-  padding: 0;
-  margin: 0; }
 
 /*# sourceMappingURL=main.css.map */

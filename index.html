@@ -28,7 +28,7 @@
 </head>
 
 <body>
-<div style="transform-style: preserve-3d" class="p-0 first-div-info container-fluid js-tilt" data-tilt-axis="xy"
+<div style="transform-style: preserve-3d" class="first-div-info container-fluid js-tilt" data-tilt-axis="xy"
   data-tilt-perspective="1000" data-tilt-speed="400">
 
   
@@ -354,16 +354,17 @@
 </div>
 
 <div class="parallax-wrapper mb-5 pb-5">
+	<div class="overlay-top">
+			<button type="button" class="change-game">Change game</button>
+	</div>
 		<div class="container p-0 mx-auto parallax-box js-tilt" style="transform-style: preserve-3d" data-tilt-axis="xy" data-tilt-perspective="1000" data-tilt-speed="400">
 				<div class="parallax" style="transform: translateZ(20px); text-align:center;">
-				<button type="button" class="change-game">Change game</button>
-
 				</div>
 		</div>
 </div>
 
 
-<div class="container-end" style="height:100vh">
+<div class="container-end" style="height:100vh; margin-top:115px;">
 	<div class="container pt-5 mt-5">
 			<h1 class="text-white text-center underline2">VR Rooms throughout the year</h1>
 				<p class="text-white text-center pt-2 pb-2">Virtual Reality and Augmented Reality are two sides of the same coin. You could think of Augmented Reality as VR
@@ -385,7 +386,6 @@
 		</div>
 	</div>
 </div>
-
 
 <nav class="wrapper" id="nav-sidebar">
   <div id="nav-side">
@@ -451,7 +451,6 @@
 			document.getElementById('map').style.cursor='default';
 
 			L.tileLayer('https://api.tiles.mapbox.com/v4/MapID/997/256/{z}/{x}/{y}.png?access_token={pk.eyJ1IjoiZXJpbmRob3giLCJhIjoiY2pza3JuOGVwMGZldDQ0bzI0YTJ3NTJ0ZiJ9.YAdAfblLByVIEUQ8d5XZPg}', {
-				attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 				maxZoom: 3
 			}).addTo(map);
 			map.locate({setView: true, maxZoom: 3});
