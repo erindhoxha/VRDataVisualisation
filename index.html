@@ -449,32 +449,12 @@
 				{style : countriesStyle}
 			).addTo(map);
 			// map.fitBounds(countriesLayer.getBounds());
-			
-			var legend = L.control({position : 'bottomright'});
-			legend.onAdd = function(map){
-				var div = L.DomUtil.create('div', 'legend');
-				var labels = [
-					"Population greater than 100000000", 
-					"Population greater than 50000000", 
-					"Population equal or less than 50000000"
-				];
-				var grades = [100000001, 50000001, 50000000];
-				div.innerHTML = '<div><b>Legend</b></div>';
-				for(var i = 0; i < grades.length; i++){
-					div.innerHTML += '<i style="background:' 
-					+ getCountryColor(grades[i]) + '">&nbsp;&nbsp;</i>&nbsp;&nbsp;'
-					+ labels[i] + '<br />';
-				}
-				return div;
-			}
-			legend.addTo(map);
-			
 			var point = [43.866667, 18.416667];
 			var myMarker = L.marker(point);
 			myMarker.addTo(map);
 			myMarker.bindPopup(
-				'<b>Sarajevo</b><div><img style="width:100%" src="http://upload.wikimedia.org/wikipedia/commons/f/fc/Sarajevo.jpg" alt="image" /></div>',
-				{minWidth : 256}
+				'<b>122,222 VR Rooms</b><br> United States of America',
+				{minWidth : 0}
 			);
 		</script>
 

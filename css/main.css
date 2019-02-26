@@ -1112,6 +1112,7 @@ svg {
 #map {
   height: 500px;
   background-color: rgba(19, 165, 255, 0.721);
+  background: linear-gradient(180deg, rgba(19, 165, 255, 0.421) 0%, #13a5ff 50%, rgba(19, 165, 255, 0.4) 100%);
 }
 
 /*# sourceMappingURL=main.css.map */
