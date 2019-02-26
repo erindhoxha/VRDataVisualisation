@@ -22,12 +22,34 @@ $(window).scroll(function () {
         $("#nav-link-1").css('color', 'rgba(19, 165, 255, 0.721)');
         $("#nav-link-2").css('color','white');
         activate(3);
-
-    startSVGAnimationEurope("#ar");
-    startSVGAnimationEurope("#ar2");
+        startSVGAnimationEurope("#ar");
+        startSVGAnimationEurope("#ar2");
+        startSVGAnimationEurope("#ar3");
+        startSVGAnimationEurope("#ar4");
         $("#nav-link").css('color','rgba(19, 165, 255, 0.721)');
     } else {
         $("#nav-link-2").css('color', 'rgba(19, 165, 255, 0.721)');
+    }
+
+    var offset3 = $(".parallax-wrapper").offset().top;
+    if ($(window).scrollTop() >= offset3) {
+        $("#nav-link-2").css('color', 'rgba(19, 165, 255, 0.721)');
+        $("#nav-link-3").css('color','white');
+        activate(4);
+        $("#nav-link").css('color','rgba(19, 165, 255, 0.721)');
+    } else {
+        $("#nav-link-3").css('color', 'rgba(19, 165, 255, 0.721)');
+    }
+
+
+    var offset4 = $(".parallax-wrapper").offset().top;
+    if ($(window).scrollTop() >= offset3) {
+        $("#nav-link-2").css('color', 'rgba(19, 165, 255, 0.721)');
+        $("#nav-link-3").css('color','white');
+        activate(4);
+        $("#nav-link").css('color','rgba(19, 165, 255, 0.721)');
+    } else {
+        $("#nav-link-3").css('color', 'rgba(19, 165, 255, 0.721)');
     }
 });
 

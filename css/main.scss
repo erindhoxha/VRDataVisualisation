@@ -384,7 +384,7 @@ textarea {
     justify-content: center;
     align-items: center;
     height:100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) -7%, rgba(0, 0, 0, 0.6) 10.00%, rgba(0, 0, 0, 1) 100.00%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) -7%, rgba(0, 0, 0, 0.2) 10.00%, rgba(0, 0, 0, 1) 100.00%);
 }
 .overlay-div2 {
     height:100%;
@@ -1140,7 +1140,11 @@ svg {
 #map { 
     height: 500px;
     background-color:$main-color;
-    background: linear-gradient(180deg, rgba(19, 165, 255, 0.421) 0%, rgba(19, 165, 255, 1) 50.00%, rgba(19, 165, 255, 0.4) 100.00%);
+    background: linear-gradient(180deg, rgba(19, 165, 255, 0.821) 0%, rgba(19, 165, 255, 1) 50.00%, rgba(19, 165, 255, 0.8) 100.00%);
 
 } 
 
+body {
+    padding: 0;
+    margin: 0;
+}
