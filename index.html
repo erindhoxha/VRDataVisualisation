@@ -17,8 +17,6 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="src/css/dvf.css">
-
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
 	integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
 	crossorigin=""/>
@@ -26,11 +24,12 @@
 	integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
 	crossorigin=""></script>
 	<meta name="theme-color" content="#fafafa">
+	<script src="js/countries.geojson"></script>
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-<div style="transform-style: preserve-3d" class=" first-div-info container-fluid js-tilt" data-tilt-axis="xy"
+<div style="transform-style: preserve-3d" class="p-0 first-div-info container-fluid js-tilt" data-tilt-axis="xy"
   data-tilt-perspective="1000" data-tilt-speed="400">
 
   
@@ -364,11 +363,6 @@
 		</div>
 </div>
 
-<div class="container-fluid mt-5 pt-5">
-	<div class="row-fluid">
-		<div id="map" class="span9"></div>
-	</div>
-</div>
 
 <div class="container-end" style="height:100vh">
 	<div class="container pt-5 mt-5">
@@ -381,7 +375,7 @@
 			<canvas id="myChartEnd" data-aos="fade-up" width="400" height="300"></canvas>
 	</div>
 </div>
-
+<div id="map"></div>
 
 <div class="container-fluid bg-tell-us-more">
 	<div class="row">
@@ -426,6 +420,64 @@
   </div>
 </div>
 
+		<script>
+			function getCountryColor(popEst){
+				if(popEst > 100000000){
+					return 'black';
+				}else if(popEst > 50000000){
+					return 'black';
+				}else{
+					return 'black';
+				}
+			}
+			
+			function countriesStyle(feature){
+				return {
+					fillColor : getCountryColor(feature.properties.pop_est),
+					opacity : 0,
+					color : ' rgba(19, 165, 255, 0.721)',
+					dashArray : 1,
+					fillOpacity : 1,
+					weight : 0.1,
+				}
+			}
+			
+			var map = L.map('map').setView([20, 20], 2);
+			var countries;
+			var countriesLayer = L.geoJson(
+				countries,
+				{style : countriesStyle}
+			).addTo(map);
+			// map.fitBounds(countriesLayer.getBounds());
+			
+			var legend = L.control({position : 'bottomright'});
+			legend.onAdd = function(map){
+				var div = L.DomUtil.create('div', 'legend');
+				var labels = [
+					"Population greater than 100000000", 
+					"Population greater than 50000000", 
+					"Population equal or less than 50000000"
+				];
+				var grades = [100000001, 50000001, 50000000];
+				div.innerHTML = '<div><b>Legend</b></div>';
+				for(var i = 0; i < grades.length; i++){
+					div.innerHTML += '<i style="background:' 
+					+ getCountryColor(grades[i]) + '">&nbsp;&nbsp;</i>&nbsp;&nbsp;'
+					+ labels[i] + '<br />';
+				}
+				return div;
+			}
+			legend.addTo(map);
+			
+			var point = [43.866667, 18.416667];
+			var myMarker = L.marker(point);
+			myMarker.addTo(map);
+			myMarker.bindPopup(
+				'<b>Sarajevo</b><div><img style="width:100%" src="http://upload.wikimedia.org/wikipedia/commons/f/fc/Sarajevo.jpg" alt="image" /></div>',
+				{minWidth : 256}
+			);
+		</script>
+
 	<script src="js/vendor/modernizr-3.6.0.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="js/plugins.js"></script>
@@ -437,13 +489,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
 	<script src="js/charts.js"></script>
 
-	<script type="text/javascript" src="../lib/bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
-	<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.3"></script>
-	<script type="text/javascript" src="js/leaflet-dvf.min.js"></script>
-	<script type="text/javascript" src="js/incomesData.js"></script>
-	<script src="src/data/countryData.js"></script>
-	<script src="js/incomelevels.js"></script>
 		
 
   <script>

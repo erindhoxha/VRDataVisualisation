@@ -384,7 +384,7 @@ textarea {
     justify-content: center;
     align-items: center;
     height:100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) -7%, rgba(0, 0, 0, 0.4) 10.00%, rgba(0, 0, 0, 1) 100.00%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) -7%, rgba(0, 0, 0, 0.6) 10.00%, rgba(0, 0, 0, 1) 100.00%);
 }
 .overlay-div2 {
     height:100%;
@@ -1140,10 +1140,6 @@ svg {
 }
 #map { 
     height: 500px;
+    background-color:$main-color;
 } 
-#map {
-    background-image: url(http://subtlepatterns.com/patterns/noisy_net.png);
-}
-.leaflet-tile-pane {
-    opacity: 0.1;
-}
+
