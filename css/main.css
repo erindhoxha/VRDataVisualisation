@@ -689,6 +689,9 @@ button:focus {
 /**
  * Style default tags
  */
+body {
+  overflow-x: hidden; }
+
 html, body {
   height: 100%;
   width: 100%;
@@ -967,7 +970,7 @@ svg {
     background-size: contain; } }
 .change-game {
   position: absolute;
-  bottom: 50px;
+  bottom: 250px;
   margin-left: -80px;
   background-color: transparent;
   border: 2px solid rgba(19, 165, 255, 0.721);
