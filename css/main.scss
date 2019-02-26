@@ -1138,3 +1138,12 @@ svg {
     align-items: center;
     border-top:2px solid $main-color;
 }
+#map { 
+    height: 500px;
+} 
+#map {
+    background-image: url(http://subtlepatterns.com/patterns/noisy_net.png);
+}
+.leaflet-tile-pane {
+    opacity: 0.1;
+}

@@ -429,3 +429,4 @@ $(".change-game").on('click', function() {
     var randomNumber = Math.floor(Math.random() * 9);
     $(".parallax-box").css('background-image', `url(${games[randomNumber]})`)
 })
+
