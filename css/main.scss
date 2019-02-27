@@ -1096,8 +1096,21 @@ svg {
 }
 
 @media only screen and (max-width: 1024px) {
+    .leaflet-popup-content {
+        font-size:25px;
+    }
+    .canvas-box {
+        width:80%;
+    }
+    .w-6 {
+        width:70% !important;
+    }
+    .vr-send, .btn-tell {
+        font-size:30px !important;
+        margin-top:20px;
+    }
     .vr-stat-number {
-        font-size:1.5em !important;
+        font-size:40px !important;
         width:80%;
         margin:0 auto;
     }
@@ -1112,7 +1125,7 @@ svg {
     }
     .vr-responsive-paragraph {
         width:80% !important;
-        font-size:18px !important;
+        font-size:25px !important;
     }
     .text-responsive {
         width:80%; 
@@ -1121,7 +1134,7 @@ svg {
         display:none;
     }
     h1 {
-        font-size:35px !important;
+        font-size:45px !important;
     }
     p {
         font-size:21px;
@@ -1136,10 +1149,97 @@ svg {
         font-size:20px;
     }
 }
+@media only screen and (max-width: 340px) {
+    div.first-div-info.container-fluid.js-tilt {
+        padding-top:100px !important;
+    }
+    .vr-responsive-paragraph {
+    width:100% !important;
+    }
+    .header-title {
+        width:100% !important;
+    }
+}
 @media only screen and (max-width: 600px) {
-        .canvas-box {
-            width: 100%;
+    .leaflet-popup-content-wrapper {
+    .leaflet-popup-content {
+        font-size:14px !important;
+    }
+}
+    .container-fluid.bg-tell-us-more {
+        .btn-tell {
+            font-size:14px !important;
         }
+        h1 {
+            font-size:24px !important;
+        }
+    }
+
+    .h1-title {
+        font-size:27px !important;
+    }
+
+    #container-flash {
+        padding-top:100px !important;
+    }
+
+    div {
+        .number {
+            font-size:20px;
+        }    
+        .vr-stat-number {
+            font-size:25px !important;
+        }
+    }
+    .overlay-div-flash {
+        p {
+            font-size:16px !important;
+        }
+        .text-percent {
+            font-size:50px !important;
+        }
+    }
+    #myChart {
+        padding: 20px 20px 0px 20px;
+    }
+    .responsive-p {
+        font-size:16px !important;
+        margin:0 auto;
+    }
+        div {
+            .header-title {
+                font-size:24px !important;
+                width:95%;
+        }
+    }
+    div {
+        .vr-responsive-paragraph {
+        font-size:16px !important;
+    }
+}
+    div {
+        .vr-send {
+        font-size:13px !important;
+    }
+}
+div.buttons-box {
+    button {
+        font-size:13px !important;
+    }
+    width:80%;
+}
+    .overlay-top {
+        height:50%;
+    }
+    .parallax-wrapper {
+        height:50vh;
+    }
+    .change-game {
+        display:none;
+    }
+    .canvas-box {
+        width: 100%;
+    }
     canvas {
         width: 375px;
     }
@@ -1149,19 +1249,39 @@ svg {
     }
 }
 @media only screen and (max-width: 768px) {
+    .leaflet-popup-content {
+        font-size:16px !important;
+    }
+    .w-6 {
+        width:90% !important;
+    }
+    .number {
+        font-size:25px;
+    }
+    .vr-stat-number {
+        font-size:30px !important;
+    }
     #img-logo {
         width: 25%;
     }
     .canvas-box {
-        width: 60%;
+        width: 100%;
+    }
+    .bg-tell-us-more {
+        h1 {
+            font-size:35px !important;
+        }
+    }
+    .btn-tell {
+        font-size:22px !important;
     }
     .h1 {
         font-size:23px !important;
         width:70% !important;
         margin:0 auto !important;
     }
-    .text-left {
-        font-size:25px !important;
+    .header-title {
+        font-size:35px !important;
     }
     .vr-responsive-paragraph {
         font-size:16px !important;
@@ -1175,10 +1295,15 @@ svg {
     .parallax {
         background-size:contain;
     }
+    .buttons-box {
+        button {
+            font-size:22px !important;
+        }
+    }
 }
 .change-game {
     position:absolute;
-    bottom:250px;
+    bottom:0;
     margin-left:-80px;
     background-color:transparent;
     border:2px solid $main-color;
@@ -1235,4 +1360,9 @@ svg {
 
 .stat-box-2 {
     height:100%;
+}
+
+.w-6 {
+    width:60%;
+    margin:0 auto;
 }

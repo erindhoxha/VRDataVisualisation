@@ -5,13 +5,9 @@ $(window).scroll(function () {
     if ($(window).scrollTop() >= offset) {
         $("#nav-link-1").css('color','white');
         $("#nav-link").css('color', 'rgba(19, 165, 255, 0.721)');
-        if (scrolled == false) {
-            $('.number').eq(0).text($('.number').attr('data-number'));
-            Counter($('.number').eq(0));s
-        }
-        var scrolled = true;
         activate(2);
     } else {
+        var scrolled = false;
         activate(1);
         $("#nav-link").css('color','white');
         $("#nav-link-1").css('color', 'rgba(19, 165, 255, 0.721)');
@@ -46,7 +42,7 @@ $(window).scroll(function () {
     if ($(window).scrollTop() >= offset4) {
         $("#nav-link-2").css('color', 'rgba(19, 165, 255, 0.721)');
         $("#nav-link-3").css('color','white');
-        activate(5);
+        activateLastOne(5);
     } else {
         $("#nav-link-3").css('color', 'rgba(19, 165, 255, 0.721)');
     }
@@ -423,6 +419,20 @@ $(".vr-send").click(function () {
     }
   };
 
+  function activateLastOne(index) {
+    if (index !== active) {
+      active       = index;
+      var $_active = $point_arr.eq(active)
+      
+      $point_arr
+        .removeClass('completed active')
+        .slice(0, active).addClass('completed')
+      
+      $_active.addClass('active-new');
+      
+      return $progress.css('width', "100%");
+    }
+  };
 startSVGAnimationEurope("#ar");
 startSVGAnimationEurope("#ar2");
 startSVGAnimationEurope("#ar3");

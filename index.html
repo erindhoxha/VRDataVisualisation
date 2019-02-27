@@ -110,13 +110,11 @@
 </div>
     <div class="overlay-div" style="transform: translateZ(20px);">
       <div class="first-div-box text-white">
-        <div class="row">
+        <div class="row" style="height:100%; width:100%; align-items: center;">
           <div class="col-lg-12 text-left" style="transform: translateZ(20px);">
-              <img id="img-logo" src="img/vr-logo3d3d-01.png" alt="">
-          </div>
-          <div class="col-lg-12 text-left" style="transform: translateZ(20px);">
-          <h1 class="text-left coolShadow" style="z-index:999999; font-weight:900;">What is Virtual Reality?</h1>
-          <h1 class="text-left coolShadow" style="z-index:999999; font-weight:900;">Made with graphs, illustrations and more...</h1>
+		   <img id="img-logo" src="img/vr-logo3d3d-01.png" alt="">
+          <h1 class="text-left coolShadow header-title" style="z-index:999999; font-weight:900;">What is Virtual Reality?</h1>
+          <h1 class="text-left coolShadow header-title" style="z-index:999999; font-weight:900;">Made with graphs, illustrations and more...</h1>
 		<p class="vr-responsive-paragraph">Virtual reality is an interactive computer-generated experience taking place within a simulated
 			environment. It incorporates mainly auditory and visual feedback, but may also allow other types of sensory feedback
 			like haptic. This immersive environment can be similar to the real world or it can be fantastical. </p>
@@ -252,7 +250,6 @@
 	  <canvas id="myChartEurope" class="myChartEurope" width="400" height="300" style="display:none"></canvas>
 	  <canvas id="myChartAmerica" class="myChartAmerica" width="400" height="300" style="display:none"></canvas>
 	  <canvas id="myChartAsia" class="myChartAsia" width="400" height="300" style="display:none"></canvas>
-
 	<div class="buttons-box">
       <button type="button" class="australia-btn">Australia</button>
       <button type="button" class="europe-btn">Europe</button>
@@ -266,15 +263,15 @@
 <div class="container-fluid p-0 m-0" id="container-flash">
 	<div class="overlay-div-flash">
 		<div class="container pt-5 mt-5">
-		<h1 class="text-white text-center underline2">What’s the difference Between Virtual Reality and Augmented Reality?</h1>
+		<h1 class="text-white text-center underline2 h1-title">What’s the difference Between Virtual Reality and Augmented Reality?</h1>
 			<p class="text-white text-center pt-2 pb-2">Virtual Reality and Augmented Reality are two sides of the same coin. You could think of Augmented Reality as VR
 				with one foot in the real world: Augmented Reality simulates artificial objects in the real environment; Virtual
 				Reality creates an artificial environment to inhabit.</p>
 		</div>
 		<div class="row">
 			<div class="col-lg-6 ag-box">
-			<h1 class="pt-5 mt-5 text-center text-percent">37%</h1>
-				<p class="text-white text-center" style="width:60%; margin:0 auto;">In Augmented Reality, the computer uses sensors and algorithms to determine the position and orientation of a camera.
+			<h1 class="pt-5 mt-5 text-center text-percent"><div class="number-2">37%</div></h1>
+				<p class="text-white text-center w-6">In Augmented Reality, the computer uses sensors and algorithms to determine the position and orientation of a camera.
 				AR technology then renders the 3D graphics as they would appear from the viewpoint of the camera, superimposing the
 				computer-generated images over a user’s view of the real world.</p class="text-white text-center pt-5 mt-5" style="width:80%; margin:0 auto;">
 			<svg id="ar" enable-background="new 0 0 946 586" version=" 1.1" viewBox="0 0 946 586" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
@@ -302,7 +299,7 @@
 			</div>
 			<div class="col-lg-6 ">
 			<h1 class="pt-5 mt-5 text-center text-percent">63%</h1>			
-				<p class="text-white text-center" style="width:60%; margin:0 auto;">In Augmented Reality, the computer uses
+				<p class="text-white text-center w-6">In Augmented Reality, the computer uses
 					sensors and algorithms to determine the position and orientation of a camera.
 					AR technology then renders the 3D graphics as they would appear from the viewpoint of the camera, superimposing the
 					computer-generated images over a user’s view of the real world.</p class="text-white text-center pt-5 mt-5" style="width:80%; margin:0 auto;">
@@ -328,7 +325,7 @@
 		<div class="row">
 			<div class="col-lg-6 ag-box">
 			<h1 class="pt-5 mt-5 text-center text-percent">AR Headsets</h1>
-				<p class="text-white text-center" style="width:60%; margin:0 auto;">In Augmented Reality, the computer uses sensors and algorithms to determine the position and orientation of a camera.
+				<p class="text-white text-center w-6">In Augmented Reality, the computer uses sensors and algorithms to determine the position and orientation of a camera.
 				AR technology then renders the 3D graphics as they would appear from the viewpoint of the camera, superimposing the
 				computer-generated images over a user’s view of the real world.</p class="text-white text-center pt-5 mt-5" style="width:80%; margin:0 auto;">
 				<?xml version="1.0" encoding="UTF-8"?>
@@ -340,7 +337,7 @@
 			</div>
 			<div class="col-lg-6 ">
 			<h1 class="pt-5 mt-5 text-center text-percent">VR Headsets</h1>			
-				<p class="text-white text-center" style="width:60%; margin:0 auto;">In Augmented Reality, the computer uses
+				<p class="text-white text-center w-6">In Augmented Reality, the computer uses
 					sensors and algorithms to determine the position and orientation of a camera.
 					AR technology then renders the 3D graphics as they would appear from the viewpoint of the camera, superimposing the
 					computer-generated images over a user’s view of the real world.</p class="text-white text-center pt-5 mt-5" style="width:80%; margin:0 auto;">
@@ -368,8 +365,8 @@
 
 <div class="container-end" style="height:100vh">
 	<div class="container pt-5 mt-5">
-			<h1 class="text-white text-center underline2">VR Rooms throughout the year</h1>
-				<p class="text-white text-center pt-2 pb-2">Virtual Reality and Augmented Reality are two sides of the same coin. You could think of Augmented Reality as VR
+			<h1 class="text-white text-center underline2 h1-title">VR Rooms throughout the year</h1>
+				<p class="text-white text-center pt-2 pb-2 responsive-p">Virtual Reality and Augmented Reality are two sides of the same coin. You could think of Augmented Reality as VR
 					with one foot in the real world: Augmented Reality simulates artificial objects in the real environment; Virtual
 					Reality creates an artificial environment to inhabit.</p>
 	</div>
