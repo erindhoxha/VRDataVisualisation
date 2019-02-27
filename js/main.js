@@ -48,6 +48,12 @@ $(window).scroll(function () {
     }
 });
 
+$( document ).ready(function() {
+    // Handler for .ready() called.
+    $(".leaflet-popup-content-wrapper").css('background-color', 'black');
+    $(".leaflet-popup-content-wrapper").css('color', 'white');
+    });
+
 jQuery.extend(jQuery.easing,
     {
         easeInOutQuad: function (x, t, b, c, d) {

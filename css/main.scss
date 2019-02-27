@@ -871,9 +871,13 @@ html, body {
   position:fixed;
   width:50%;
   top:0;
-  left:23%;
+  left:25%;
 }
 
+.leaflet-popup-content-wrapper {
+    background-color:black;
+    color:white;
+}
 
 
 *, *:before, *:after {
