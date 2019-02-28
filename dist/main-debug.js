@@ -487,6 +487,9 @@ scrollTo(".prog-1", ".first-div-info");
 scrollTo(".prog-3", "#container-flash");
 scrollTo("#nav-link", ".first-div-info");
 scrollTo("#nav-link-1", ".people-using-vr-rooms");
+scrollTo("#nav-link-2", "#container-flash");
+scrollTo("#nav-link-3", ".parallax-wrapper");
+
 function startSVGAnimationAR(parentElement) {
     drawSVGPaths(parentElement, 1400, 1400, 450);
 }
