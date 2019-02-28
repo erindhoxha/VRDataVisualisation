@@ -1,5 +1,6 @@
 // scroll add active classes
 scrolled = false;
+var scrolled = false;
 $(window).scroll(function () {
     var offset = $(".vr-send").offset().top;
     if ($(window).scrollTop() >= offset) {
@@ -7,7 +8,6 @@ $(window).scroll(function () {
         $("#nav-link").css('color', 'rgba(19, 165, 255, 0.721)');
         activate(2);
     } else {
-        var scrolled = false;
         activate(1);
         $("#nav-link").css('color','white');
         $("#nav-link-1").css('color', 'rgba(19, 165, 255, 0.721)');
@@ -15,13 +15,16 @@ $(window).scroll(function () {
 
     var offset2 = $("#container-flash").offset().top;
     if ($(window).scrollTop() >= offset2) {
+        if (scrolled == false) {
+        startSVGAnimationAR("#ar");
+        startSVGAnimationAR("#ar2");
+        startSVGAnimationAR("#ar3");
+        startSVGAnimationAR("#ar4");
+        scrolled = true;
+        }
         $("#nav-link-1").css('color', 'rgba(19, 165, 255, 0.721)');
         $("#nav-link-2").css('color','white');
         activate(3);
-        startSVGAnimationEurope("#ar");
-        startSVGAnimationEurope("#ar2");
-        startSVGAnimationEurope("#ar3");
-        startSVGAnimationEurope("#ar4");
         $("#nav-link").css('color','rgba(19, 165, 255, 0.721)');
     } else {
         $("#nav-link-2").css('color', 'rgba(19, 165, 255, 0.721)');
@@ -285,7 +288,7 @@ function startSVGAnimationEurope(parentElement) {
 }
 
 $(".australia-btn").on('click', function(){
-    $("#myChartEurope, #myChartAmerica, #myChartAsia").hide();
+    $("#myChartEurope, #myChartAmerica, #myChartAsia, #myChartAfrica").hide();
     $("#myChart").show();
     $(".buttons-box button").removeClass('active');
     $(".australia-btn").addClass('active'); 
@@ -295,13 +298,15 @@ $(".australia-btn").on('click', function(){
     $("#stLiberty").fadeOut(300);
     $("#whiteHouse").fadeOut(300);
     $("#svg-europe-flag").fadeOut(300);
+    $("#svg-asia").fadeOut(300);
+    $("#svg-africa").fadeOut(300);
     addChartForAustralia();
     startSVGAnimationText($('#svg-australia'));
     startSVGAnimationText($('#svg-new-zealand'));
 })
 
 $(".europe-btn").on('click', function() {
-    $("#myChart, #myChartAmerica, #myChartAsia").hide();
+    $("#myChart, #myChartAmerica, #myChartAsia, #myChartAfrica").hide();
     $("#myChartEurope").show();
     $(".buttons-box button").removeClass('active');
     $(".europe-btn").addClass('active');
@@ -314,10 +319,12 @@ $(".europe-btn").on('click', function() {
     $("#svg-new-zealand").fadeOut(300);
     $("#stLiberty").fadeOut(300);
     $("#whiteHouse").fadeOut(300);
+    $("#svg-asia").fadeOut(300);
+    $("#svg-africa").fadeOut(300);
 })
 
 $(".america-btn").on('click', function(){
-    $("#myChart, #myChartEurope, #myChartAsia").hide();
+    $("#myChart, #myChartEurope, #myChartAsia, #myChartAfrica").hide();
     $("#myChartAmerica").show();
     $(".buttons-box button").removeClass('active');
     $(".america-btn").addClass('active');
@@ -328,6 +335,8 @@ $(".america-btn").on('click', function(){
     $("#svg-new-zealand").fadeOut(300);
     $("#svg-europe").fadeOut(300);
     $("#svg-europe-flag").fadeOut(300);
+    $("#svg-asia").fadeOut(300);
+    $("#svg-africa").fadeOut(300);
     addChartForAustralia();
     startSVGAnimationEurope($('#stLiberty'));
     startSVGAnimationEurope("#whiteHouse");
@@ -335,11 +344,36 @@ $(".america-btn").on('click', function(){
 $(".asia-btn").on('click', function() {
     $(".buttons-box button").removeClass('active');
     $(".asia-btn").addClass('active');
-    $("#myChart, #myChartAmerica, #myChartEurope").hide();
+    $("#myChart, #myChartAmerica, #myChartEurope, #myChartAfrica").hide();
     $("#myChartAsia").show();
+    $("#svg-australia").fadeOut(300);
+    $("#svg-new-zealand").fadeOut(300);
+    $("#svg-europe").fadeOut(300);
+    $("#svg-europe-flag").fadeOut(300);
+    $("#whiteHouse").fadeOut(300);
+    $("#stLiberty").fadeOut(300);
+    $("#svg-africa").fadeOut(300);
     addChartForAsia();
-
+    startSVGAnimationText($('#svg-asia'));
+    $("#svg-asia").show();
 })
+$(".africa-btn").on('click', function () {
+    $(".buttons-box button").removeClass('active');
+    $(".africa-btn").addClass('active');
+    $("#myChart, #myChartAmerica, #myChartEurope, #myChartAsia").hide();
+    $("#myChartAfrica").show();
+    addChartForAfrica();
+    $("#svg-australia").fadeOut(300);
+    $("#svg-new-zealand").fadeOut(300);
+    $("#svg-europe").fadeOut(300);
+    $("#svg-europe-flag").fadeOut(300);
+    $("#whiteHouse").fadeOut(300);
+    $("#stLiberty").fadeOut(300);
+    $("#svg-asia").fadeOut(300);
+    $("#svg-africa").show();
+    startSVGAnimationText($('#svg-africa'));
+})
+
 
 function Counter(obj){
   
@@ -439,10 +473,7 @@ $(".vr-send").click(function () {
       return $progress.css('width', "100%");
     }
   };
-startSVGAnimationEurope("#ar");
-startSVGAnimationEurope("#ar2");
-startSVGAnimationEurope("#ar3");
-startSVGAnimationEurope("#ar4");
+
 function scrollTo(classOrId, idToGo) {
     $(classOrId).on('click', function(){
         $([document.documentElement, document.body]).animate({
@@ -456,4 +487,20 @@ scrollTo(".prog-1", ".first-div-info");
 scrollTo(".prog-3", "#container-flash");
 scrollTo("#nav-link", ".first-div-info");
 scrollTo("#nav-link-1", ".people-using-vr-rooms");
+function startSVGAnimationAR(parentElement) {
+    drawSVGPaths(parentElement, 1400, 1400, 450);
+}
+function onClick(id) {
+    $(id).on('click', function() {
+        startSVGAnimationAR(id);
+    })
+}
+onClick("#ar");
+onClick("#ar2");
+onClick("#ar3");
+onClick("#ar4");
+startSVGAnimationAR("#ar");
+startSVGAnimationAR("#ar2");
+startSVGAnimationAR("#ar3");
+startSVGAnimationAR("#ar4");
 

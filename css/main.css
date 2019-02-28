@@ -20,7 +20,14 @@ html {
 }
 
 #myChartEnd {
-  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.coolShadow-ar {
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(1, 35, 56, 0.721);
+  text-shadow: 1px -1px 0 rgba(1, 35, 56, 0.721), 2px -2px 0 rgba(1, 35, 56, 0.721), 3px -3px 0 rgba(1, 35, 56, 0.721), 4px -4px 0 rgba(1, 35, 56, 0.721);
 }
 
 .parallax-wrapper {
@@ -347,8 +354,12 @@ h3 {
 }
 
 .overlay-div-end {
-  height: 100%;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 55%, rgba(0, 0, 0, 0.7) 80%, black 100%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .overlay-div-people-vr {
@@ -602,6 +613,50 @@ path {
 }
 #whiteHouse path.st1 {
   stroke-width: 1;
+}
+
+#svg-asia {
+  max-width: 100%;
+  position: absolute;
+  opacity: 1;
+  height: 500px;
+  display: none;
+  z-index: -1;
+  left: 5%;
+  margin-top: 30px;
+}
+#svg-asia path {
+  fill: none;
+  stroke: rgba(19, 165, 255, 0.721);
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+#svg-asia path.st1 {
+  stroke-width: 2;
+}
+
+#svg-africa {
+  max-width: 100%;
+  position: absolute;
+  opacity: 1;
+  height: 500px;
+  display: none;
+  z-index: -1;
+  left: 5%;
+  margin-top: 30px;
+}
+#svg-africa path {
+  fill: none;
+  stroke: rgba(19, 165, 255, 0.721);
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+#svg-africa path.st1 {
+  stroke-width: 2;
 }
 
 #svg-australia {

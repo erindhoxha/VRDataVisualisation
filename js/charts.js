@@ -206,7 +206,7 @@ function addChartForAsia() {
     type: 'pie',
     data: {
     labels: 
-      ['Auckland', 'Wellington', 'Hamilton', 'Dunedin', 'Christchurch'],
+      ['Malaysia', 'Singapore', 'South Korea', 'Afghanistan', 'Phillippines'],
       datasets: [{
         label: '# of Votes',
         data: [20, 10, 4, 2],
@@ -280,9 +280,89 @@ function addChartForAsia() {
       }
     }
   });
-  myNewChart.options.legend.display = false; 
 }
 
+
+function addChartForAfrica() {
+  var myNewChart = document.getElementById("myChartAfrica").getContext('2d');
+  var myChart = new Chart(myNewChart, {
+    type: 'pie',
+    data: {
+      labels: ['Malaysia', 'Singapore', 'South Korea', 'Afghanistan', 'Phillippines'],
+      datasets: [{
+        label: '# of Votes',
+        data: [20, 10, 4, 2],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.4)',
+          'rgba(54, 162, 235, 0.4)',
+          'rgba(255, 206, 86,0.4)',
+          'rgba(75, 192, 192,0.4)',
+          'rgba(153, 102, 255,0.4)',
+          'rgba(255, 159, 64,0.4)'
+        ],
+        borderColor: [
+          'rgba(255,99,132,1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 0
+      }]
+    },
+    options: {
+      legend: {
+        labels: {
+          // This more specific font property overrides the global property
+          fontColor: 'white',
+          fontSize: 15,
+          padding: 20,
+        }
+      },
+      tooltips: {
+        callbacks: {
+          labelColor: function (tooltipItem, chart) {
+            return {
+              borderColor: 'rgb(255, 255, 255)',
+              backgroundColor: 'rgb(255, 255, 255)'
+            }
+          },
+          labelTextColor: function (tooltipItem, chart) {
+            return '#fff';
+          }
+        }
+      },
+      layout: {
+        padding: 30,
+        left: 10,
+        top: 5,
+      },
+      gridLines: {
+        display: false
+      },
+      scales: {
+        display: false,
+        yAxes: [{
+          ticks: {
+            maxTicksLimit: 3,
+            padding: 100,
+            beginAtZero: true,
+            display: false
+          },
+        }]
+      }
+    },
+    layout: {
+      padding: {
+        left: 50,
+        top: 50,
+        bottom: 0,
+        right: 0
+      }
+    }
+  });
+}
 
 
 var ctx = document.getElementById("myChartEnd").getContext('2d');
