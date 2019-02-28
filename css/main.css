@@ -1062,7 +1062,20 @@ svg {
   max-width: 100% !important;
 }
 
+.w-6 {
+  width: 60%;
+  margin: 0 auto;
+}
+
 @media only screen and (max-width: 1024px) {
+  .w-6 {
+    width: 80%;
+  }
+
+  .leaflet-popup-content {
+    font-size: 19px;
+  }
+
   .vr-stat-number {
     font-size: 1.5em !important;
     width: 80%;
@@ -1094,8 +1107,8 @@ svg {
     display: none;
   }
 
-  h1 {
-    font-size: 35px !important;
+  .text-percent {
+    font-size: 4em;
   }
 
   p {
