@@ -254,7 +254,8 @@
       <button type="button" class="australia-btn">Australia</button>
       <button type="button" class="europe-btn">Europe</button>
       <button type="button" class="america-btn">America</button>
-      <button type="button" class="asia-btn">Asia</button>
+	  <button type="button" class="asia-btn">Asia (OOO)</button>
+      <button type="button" class="africa-btn">Africa (OOO)</button>	  
     </div>
   </div>
 </div>
@@ -351,12 +352,12 @@
 	</div>
 </div>
 
-<div class="parallax-wrapper mb-5 pb-5">
+<div class="parallax-wrapper mb-5 pb-5 js-tilt" style="transform-style: preserve-3d" data-tilt-axis="xy" data-tilt-perspective="1000" data-tilt-speed="400">
 	<div class="overlay-top">
 	<button type="button" class="change-game">Change game</button>
 	</div>
-		<div class="container p-0 mx-auto parallax-box js-tilt" style="transform-style: preserve-3d" data-tilt-axis="xy" data-tilt-perspective="1000" data-tilt-speed="400">
-				<div class="parallax" style="transform: translateZ(20px); text-align:center;">
+		<div class="container p-0 mx-auto parallax-box">
+				<div class="parallax" style="text-align:center;">
 
 				</div>
 		</div>
@@ -463,7 +464,7 @@
 			).addTo(map);
 			// map.fitBounds(countriesLayer.getBounds());
 
-			function addMarkerToContinent(arrayOfLongitudeAndLatitude) {
+			function addMarkerToContinent(arrayOfLongitudeAndLatitude, div) {
 				var greenIcon = L.icon({
 				iconUrl: '../img/vrIcon.png',
 				iconSize:     [50, 35], // size of the icon
@@ -473,7 +474,7 @@
 				var markerVR = L.marker(arrayOfLongitudeAndLatitude, {icon: greenIcon});
 				markerVR.addTo(map);
 				markerVR.bindPopup(
-									'<div><b>122,222 VR Rooms</b><br> United States of America <br><b>1st one to open the VR Rooms</b></div>',
+									div,
 				{minWidth : 0}
 				);
 			}
@@ -486,7 +487,7 @@
 				popupAnchor:  [-3, -15] // point from which the popup should open relative to the iconAnchor
 			});
 				var radius = e.accuracy / 2;
-				L.marker(e.latlng, {icon: greenIcon}).addTo(map).bindPopup("You are within " + radius + " meters from this point, check your VR Stats!").openPopup();
+				L.marker(e.latlng, {icon: greenIcon}).addTo(map).bindPopup("You are here! Check our your nearest continent to see how many VR rooms you have!").openPopup();
 				L.circle(e.latlng, radius).addTo(map);
 			}
 
@@ -498,17 +499,17 @@
 
 			map.on('locationerror', onLocationError);
 			//EUROPE
-			addMarkerToContinent([50, 20]);
+			addMarkerToContinent([50, 20], '<div><b><span class="active-map">4,412 VR Rooms</span></b><br> Europe <br><b>3rd continent to open the VR Rooms</b></div>');
 			//AFRICA
-			addMarkerToContinent([10, 20]);
+			addMarkerToContinent([10, 20],'<div><b><span class="active-map">2,534 VR Rooms</span></b><br> Africa <br><b>6th continent to open the VR Rooms</b></div>');
 			// ASIA
-			addMarkerToContinent([50, 100]);
+			addMarkerToContinent([50, 100],'<div><b><span class="active-map">1,552 VR Rooms</span></b><br> Asia <br><b>2nd continent to open the VR Rooms</b></div>');
 			// AUSTRALIA
-			addMarkerToContinent([-25, 135]);
+			addMarkerToContinent([-25, 135],'<div><b><span class="active-map">252 VR Rooms</span></b><br> Australia <br><b>4th continent to open the VR Rooms</b></div>');
 			// NORTH AMERICA
-			addMarkerToContinent([50, -100]);
+			addMarkerToContinent([50, -100],'<div><b><span class="active-map">2422 VR Rooms</span></b><br> North America <br><b>1st continent to open the VR Rooms</b></div>');
 			// SOUTH AMERICA
-			addMarkerToContinent([-15, -60]);
+			addMarkerToContinent([-15, -60],'<div><b><span class="active-map">412 VR Rooms</span></b><br> South America <br><b>5th continent to open the VR Rooms</b></div>');
 
 		</script>
 
