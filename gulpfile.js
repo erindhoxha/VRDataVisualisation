@@ -1,19 +1,23 @@
 'use strict';
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var uglify = require("gulp-uglify");
-var pump = require("pump");
+var minify = require('gulp-minify');
+
+
 
 sass.compiler = require('node-sass');
 
-gulp.task('compress', function (cb) {
-  pump([
-        gulp.src('lib/*.js'),
-        uglify(),
-        gulp.dest('dist')
-    ],
-    cb
-  );
+gulp.task('compress', function () {
+    gulp.src(['js/*.js'])
+        .pipe(minify({
+            ext: {
+                src: '-debug.js',
+                min: '.js'
+            },
+            exclude: ['tasks'],
+            ignoreFiles: ['bootstrap.js', '-min.js', 'bootstrap']
+        }))
+        .pipe(gulp.dest('dist'))
 });
 
 gulp.task('sass', function () {
