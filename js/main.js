@@ -457,7 +457,6 @@ scrollTo(".prog-3", "#container-flash");
 scrollTo("#nav-link", ".first-div-info");
 scrollTo("#nav-link-1", ".people-using-vr-rooms");
 
-
 var games = [];
 for (var i = 1; i < 11; i++) {
     games.push(`img/vrgame${i}.jpg`);
