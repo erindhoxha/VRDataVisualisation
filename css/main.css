@@ -330,7 +330,7 @@ h3 {
   height: 100vh;
   width: 100%;
   background-color: #000000;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%234799f9' fill-opacity='0.1' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%234799f9' fill-opacity='0.2' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .people-using-vr-rooms {
@@ -831,7 +831,12 @@ html, body {
   position: fixed;
   width: 50%;
   top: 0;
-  left: 23%;
+  left: 25%;
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: black;
+  color: white;
 }
 
 *, *:before, *:after {
@@ -1027,7 +1032,7 @@ body::before {
 
 .parallax {
   /* The image used */
-  background-image: url("../img/vr-headsets.png");
+  background-image: url("../img/vr-headsets2.png");
   /* Set a specific height */
   height: 100%;
   /* Create the parallax scrolling effect */
@@ -1068,16 +1073,25 @@ svg {
 }
 
 @media only screen and (max-width: 1024px) {
-  .w-6 {
+  .leaflet-popup-content {
+    font-size: 25px;
+  }
+
+  .canvas-box {
     width: 80%;
   }
 
-  .leaflet-popup-content {
-    font-size: 19px;
+  .w-6 {
+    width: 70% !important;
+  }
+
+  .vr-send, .btn-tell {
+    font-size: 30px !important;
+    margin-top: 20px;
   }
 
   .vr-stat-number {
-    font-size: 1.5em !important;
+    font-size: 40px !important;
     width: 80%;
     margin: 0 auto;
   }
@@ -1096,7 +1110,7 @@ svg {
 
   .vr-responsive-paragraph {
     width: 80% !important;
-    font-size: 18px !important;
+    font-size: 25px !important;
   }
 
   .text-responsive {
@@ -1107,8 +1121,8 @@ svg {
     display: none;
   }
 
-  .text-percent {
-    font-size: 4em;
+  h1 {
+    font-size: 45px !important;
   }
 
   p {
@@ -1127,7 +1141,94 @@ svg {
     font-size: 20px;
   }
 }
+@media only screen and (max-width: 340px) {
+  div.first-div-info.container-fluid.js-tilt {
+    padding-top: 100px !important;
+  }
+
+  .vr-responsive-paragraph {
+    width: 100% !important;
+  }
+
+  .header-title {
+    width: 100% !important;
+  }
+}
 @media only screen and (max-width: 600px) {
+  .leaflet-popup-content-wrapper .leaflet-popup-content {
+    font-size: 14px !important;
+  }
+
+  .container-fluid.bg-tell-us-more .btn-tell {
+    font-size: 14px !important;
+  }
+  .container-fluid.bg-tell-us-more h1 {
+    font-size: 24px !important;
+  }
+
+  .h1-title {
+    font-size: 27px !important;
+  }
+
+  #container-flash {
+    padding-top: 100px !important;
+  }
+
+  div .number {
+    font-size: 20px;
+  }
+  div .vr-stat-number {
+    font-size: 25px !important;
+  }
+
+  .overlay-div-flash p {
+    font-size: 16px !important;
+  }
+  .overlay-div-flash .text-percent {
+    font-size: 50px !important;
+  }
+
+  #myChart {
+    padding: 20px 20px 0px 20px;
+  }
+
+  .responsive-p {
+    font-size: 16px !important;
+    margin: 0 auto;
+  }
+
+  div .header-title {
+    font-size: 24px !important;
+    width: 95%;
+  }
+
+  div .vr-responsive-paragraph {
+    font-size: 16px !important;
+  }
+
+  div .vr-send {
+    font-size: 13px !important;
+  }
+
+  div.buttons-box {
+    width: 80%;
+  }
+  div.buttons-box button {
+    font-size: 13px !important;
+  }
+
+  .overlay-top {
+    height: 50%;
+  }
+
+  .parallax-wrapper {
+    height: 50vh;
+  }
+
+  .change-game {
+    display: none;
+  }
+
   .canvas-box {
     width: 100%;
   }
@@ -1142,12 +1243,36 @@ svg {
   }
 }
 @media only screen and (max-width: 768px) {
+  .leaflet-popup-content {
+    font-size: 16px !important;
+  }
+
+  .w-6 {
+    width: 90% !important;
+  }
+
+  .number {
+    font-size: 25px;
+  }
+
+  .vr-stat-number {
+    font-size: 30px !important;
+  }
+
   #img-logo {
     width: 25%;
   }
 
   .canvas-box {
-    width: 60%;
+    width: 100%;
+  }
+
+  .bg-tell-us-more h1 {
+    font-size: 35px !important;
+  }
+
+  .btn-tell {
+    font-size: 22px !important;
   }
 
   .h1 {
@@ -1156,8 +1281,8 @@ svg {
     margin: 0 auto !important;
   }
 
-  .text-left {
-    font-size: 25px !important;
+  .header-title {
+    font-size: 35px !important;
   }
 
   .vr-responsive-paragraph {
@@ -1175,10 +1300,14 @@ svg {
   .parallax {
     background-size: contain;
   }
+
+  .buttons-box button {
+    font-size: 22px !important;
+  }
 }
 .change-game {
   position: absolute;
-  bottom: 250px;
+  bottom: 0;
   margin-left: -80px;
   background-color: transparent;
   border: 2px solid rgba(19, 165, 255, 0.721);
@@ -1234,6 +1363,20 @@ svg {
 
 .stat-box-2 {
   height: 100%;
+}
+
+.w-6 {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background-color: black !important;
+  color: white !important;
+}
+
+.active-map {
+  color: rgba(19, 165, 255, 0.721) !important;
 }
 
 /*# sourceMappingURL=main.css.map */

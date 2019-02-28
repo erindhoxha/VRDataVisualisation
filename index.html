@@ -110,13 +110,11 @@
 </div>
     <div class="overlay-div" style="transform: translateZ(20px);">
       <div class="first-div-box text-white">
-        <div class="row">
+        <div class="row" style="height:100%; width:100%; align-items: center;">
           <div class="col-lg-12 text-left" style="transform: translateZ(20px);">
-              <img id="img-logo" src="img/vr-logo3d3d-01.png" alt="">
-          </div>
-          <div class="col-lg-12 text-left" style="transform: translateZ(20px);">
-          <h1 class="text-left coolShadow" style="z-index:999999; font-weight:900;">What is Virtual Reality?</h1>
-          <h1 class="text-left coolShadow" style="z-index:999999; font-weight:900;">Made with graphs, illustrations and more...</h1>
+		   <img id="img-logo" src="img/vr-logo3d3d-01.png" alt="">
+          <h1 class="text-left coolShadow header-title" style="z-index:999999; font-weight:900;">What is Virtual Reality?</h1>
+          <h1 class="text-left coolShadow header-title" style="z-index:999999; font-weight:900;">Made with graphs, illustrations and more...</h1>
 		<p class="vr-responsive-paragraph">Virtual reality is an interactive computer-generated experience taking place within a simulated
 			environment. It incorporates mainly auditory and visual feedback, but may also allow other types of sensory feedback
 			like haptic. This immersive environment can be similar to the real world or it can be fantastical. </p>
@@ -252,12 +250,12 @@
 	  <canvas id="myChartEurope" class="myChartEurope" width="400" height="300" style="display:none"></canvas>
 	  <canvas id="myChartAmerica" class="myChartAmerica" width="400" height="300" style="display:none"></canvas>
 	  <canvas id="myChartAsia" class="myChartAsia" width="400" height="300" style="display:none"></canvas>
-
 	<div class="buttons-box">
       <button type="button" class="australia-btn">Australia</button>
       <button type="button" class="europe-btn">Europe</button>
       <button type="button" class="america-btn">America</button>
-      <button type="button" class="asia-btn">Asia</button>
+	  <button type="button" class="asia-btn">Asia (OOO)</button>
+      <button type="button" class="africa-btn">Africa</button>	  
     </div>
   </div>
 </div>
@@ -266,14 +264,14 @@
 <div class="container-fluid p-0 m-0" id="container-flash">
 	<div class="overlay-div-flash">
 		<div class="container pt-5 mt-5">
-		<h1 class="text-white text-center underline2">What’s the difference Between Virtual Reality and Augmented Reality?</h1>
+		<h1 class="text-white text-center underline2 h1-title">What’s the difference Between Virtual Reality and Augmented Reality?</h1>
 			<p class="text-white text-center pt-2 pb-2">Virtual Reality and Augmented Reality are two sides of the same coin. You could think of Augmented Reality as VR
 				with one foot in the real world: Augmented Reality simulates artificial objects in the real environment; Virtual
 				Reality creates an artificial environment to inhabit.</p>
 		</div>
 		<div class="row">
 			<div class="col-lg-6 ag-box">
-			<h1 class="pt-5 mt-5 text-center text-percent">37%</h1>
+			<h1 class="pt-5 mt-5 text-center text-percent"><div class="number-2">37%</div></h1>
 				<p class="text-white text-center w-6">In Augmented Reality, the computer uses sensors and algorithms to determine the position and orientation of a camera.
 				AR technology then renders the 3D graphics as they would appear from the viewpoint of the camera, superimposing the
 				computer-generated images over a user’s view of the real world.</p class="text-white text-center pt-5 mt-5" style="width:80%; margin:0 auto;">
@@ -340,7 +338,7 @@
 			</div>
 			<div class="col-lg-6 ">
 			<h1 class="pt-5 mt-5 text-center text-percent">VR Headsets</h1>			
-				<p class="text-white text-center w-6 pb-3">In Augmented Reality, the computer uses
+				<p class="text-white text-center w-6">In Augmented Reality, the computer uses
 					sensors and algorithms to determine the position and orientation of a camera.
 					AR technology then renders the 3D graphics as they would appear from the viewpoint of the camera, superimposing the
 					computer-generated images over a user’s view of the real world.</p class="text-white text-center pt-5 mt-5" style="width:80%; margin:0 auto;">
@@ -354,12 +352,12 @@
 	</div>
 </div>
 
-<div class="parallax-wrapper mb-5 pb-5">
+<div class="parallax-wrapper mb-5 pb-5 js-tilt" style="transform-style: preserve-3d" data-tilt-axis="xy" data-tilt-perspective="1000" data-tilt-speed="400">
 	<div class="overlay-top">
 	<button type="button" class="change-game">Change game</button>
 	</div>
-		<div class="container p-0 mx-auto parallax-box js-tilt" style="transform-style: preserve-3d" data-tilt-axis="xy" data-tilt-perspective="1000" data-tilt-speed="400">
-				<div class="parallax" style="transform: translateZ(20px); text-align:center;">
+		<div class="container p-0 mx-auto parallax-box">
+				<div class="parallax" style="text-align:center;">
 
 				</div>
 		</div>
@@ -368,8 +366,8 @@
 
 <div class="container-end" style="height:100vh">
 	<div class="container pt-5 mt-5">
-			<h1 class="text-white text-center underline2">VR Rooms throughout the year</h1>
-				<p class="text-white text-center pt-2 pb-2">Virtual Reality and Augmented Reality are two sides of the same coin. You could think of Augmented Reality as VR
+			<h1 class="text-white text-center underline2 h1-title">VR Rooms throughout the year</h1>
+				<p class="text-white text-center pt-2 pb-2 responsive-p">Virtual Reality and Augmented Reality are two sides of the same coin. You could think of Augmented Reality as VR
 					with one foot in the real world: Augmented Reality simulates artificial objects in the real environment; Virtual
 					Reality creates an artificial environment to inhabit.</p>
 	</div>
@@ -392,7 +390,7 @@
 
 <nav class="wrapper" id="nav-sidebar">
   <div id="nav-side">
-    <a class="text-white" href="#">erindhox_</a>
+    <a class="text-white" href="www.github.com/erindhoxha" target="_blank">erindhox_</a>
     <li></li><a href="#section1" id="nav-link-3">Chart Data</a></li>
     <li></li><a href="#section1" id="nav-link-2">VR Rooms</a></li>
 	<li></li><a href="#section1" id="nav-link-1">Concept</a></li>
@@ -466,7 +464,7 @@
 			).addTo(map);
 			// map.fitBounds(countriesLayer.getBounds());
 
-			function addMarkerToContinent(arrayOfLongitudeAndLatitude) {
+			function addMarkerToContinent(arrayOfLongitudeAndLatitude, div) {
 				var greenIcon = L.icon({
 				iconUrl: '../img/vrIcon.png',
 				iconSize:     [50, 35], // size of the icon
@@ -476,7 +474,7 @@
 				var markerVR = L.marker(arrayOfLongitudeAndLatitude, {icon: greenIcon});
 				markerVR.addTo(map);
 				markerVR.bindPopup(
-									'<div><b>122,222 VR Rooms</b><br> United States of America <br><b>1st one to open the VR Rooms</b></div>',
+									div,
 				{minWidth : 0}
 				);
 			}
@@ -489,7 +487,7 @@
 				popupAnchor:  [-3, -15] // point from which the popup should open relative to the iconAnchor
 			});
 				var radius = e.accuracy / 2;
-				L.marker(e.latlng, {icon: greenIcon}).addTo(map).bindPopup("You are within " + radius + " meters from this point, check your VR Stats!").openPopup();
+				L.marker(e.latlng, {icon: greenIcon}).addTo(map).bindPopup("You are here! Check our your nearest continent to see how many VR rooms you have!").openPopup();
 				L.circle(e.latlng, radius).addTo(map);
 			}
 
@@ -501,17 +499,18 @@
 
 			map.on('locationerror', onLocationError);
 			//EUROPE
-			addMarkerToContinent([50, 20]);
+			addMarkerToContinent([50, 20], '<div><b><span class="active-map">4,412 VR Rooms</span></b><br> Europe <br><b>3rd continent to open the VR Rooms</b></div>');
 			//AFRICA
-			addMarkerToContinent([10, 20]);
+			addMarkerToContinent([10, 20],'<div><b><span class="active-map">2,534 VR Rooms</span></b><br> Africa <br><b>6th continent to open the VR Rooms</b></div>');
 			// ASIA
-			addMarkerToContinent([50, 100]);
+			addMarkerToContinent([50, 100],'<div><b><span class="active-map">1,552 VR Rooms</span></b><br> Asia <br><b>2nd continent to open the VR Rooms</b></div>');
 			// AUSTRALIA
-			addMarkerToContinent([-25, 135]);
+			addMarkerToContinent([-25, 135],'<div><b><span class="active-map">252 VR Rooms</span></b><br> Australia <br><b>4th continent to open the VR Rooms</b></div>');
 			// NORTH AMERICA
-			addMarkerToContinent([50, -100]);
+			addMarkerToContinent([50, -100],'<div><b><span class="active-map">2422 VR Rooms</span></b><br> North America <br><b>1st continent to open the VR Rooms</b></div>');
 			// SOUTH AMERICA
-			addMarkerToContinent([-15, -60]);
+			addMarkerToContinent([-15, -60],'<div><b><span class="active-map">412 VR Rooms</span></b><br> South America <br><b>5th continent to open the VR Rooms</b></div>');
+
 		</script>
 
 	<script src="js/vendor/modernizr-3.6.0.min.js"></script>
@@ -524,8 +523,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
 	<script src="js/charts.js"></script>
-
-		
 
   <script>
   const tilt = $('.js-tilt').tilt();

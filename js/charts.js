@@ -1,10 +1,10 @@
 function addChartForAustralia() {
     var ctx = document.getElementById("myChart").getContext('2d');
-    var myChart = new Chart(ctx, {
+    var myChart2 = new Chart(ctx, {
       type: 'doughnut',
       data: {
       labels: 
-        ['Auckland', 'Wellington', 'Hamilton', 'Dunedin', 'Christchurch'],
+        ['New Zealand', 'Australia', 'Auckland', 'Sydney', 'Christchurch'],
         datasets: [{
           label: '# of Votes',
           data: [15, 11, 5, 12, 24],
@@ -28,6 +28,14 @@ function addChartForAustralia() {
         }]
       },
       options: {
+        legend: {
+          labels: {
+              // This more specific font property overrides the global property
+              fontColor: 'white',
+              fontSize: 15,
+              padding:20,
+          }
+      },
         layout: {
           padding: 30,
           left: 10,
@@ -67,7 +75,7 @@ function addChartForEurope() {
     type: 'pie',
     data: {
     labels: 
-      ['Auckland', 'Wellington', 'Hamilton', 'Dunedin', 'Christchurch'],
+      ['Italy', 'France', 'England', 'Albania', 'Bulgaria'],
       datasets: [{
         label: '# of Votes',
         data: [15, 11, 5, 12, 24],
@@ -91,6 +99,14 @@ function addChartForEurope() {
       }]
     },
     options: {
+      legend: {
+        labels: {
+            // This more specific font property overrides the global property
+            fontColor: 'white',
+            fontSize: 15,
+            padding:20,
+        }
+    },
       layout: {
         padding: 30,
         left: 10,
@@ -148,6 +164,14 @@ function addChartForAmerica() {
       }]
     },
     options: {
+      legend: {
+        labels: {
+            // This more specific font property overrides the global property
+            fontColor: 'white',
+            fontSize: 15,
+            padding:20,
+        }
+    },
       layout: {
         padding: 30,
         left: 10,
@@ -206,6 +230,14 @@ function addChartForAsia() {
       }]
     },
     options: {
+      legend: {
+        labels: {
+            // This more specific font property overrides the global property
+            fontColor: 'white',
+            fontSize: 15,
+            padding:20,
+        }
+    },
       tooltips: {
         callbacks: {
             labelColor: function(tooltipItem, chart) {
@@ -258,10 +290,10 @@ var myChart = new Chart(ctx, {
   type: 'line',
   data: {
   labels: 
-    ['2005', '2008', '2012', '2015', '2019'],
+    ['2005','2006','2007','2008','2009','2010','2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019'],
     datasets: [{
       label: 'Number of VR Rooms',
-      data: [2,4,5, 10, 15, 20],
+      data: [2,4,5, 10, 30, 40, 50, 60, 70, 80, 90, 100, 120, 140, 300],
           backgroundColor: [
               'rgba(19, 165, 255, 0.721))',
               'rgba(19, 165, 255, 0.121))',
@@ -275,8 +307,12 @@ var myChart = new Chart(ctx, {
   },
   options: {
     legend: {
-      display: false
-    },
+      display: false,
+      labels: {
+          // This more specific font property overrides the global property
+        display:false
+      }
+  },
     layout: {
       padding: 30,
       left: 10,
