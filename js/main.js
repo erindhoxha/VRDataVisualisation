@@ -460,7 +460,7 @@ scrollTo("#nav-link-1", ".people-using-vr-rooms");
 
 var games = [];
 for (var i = 1; i < 11; i++) {
-    games.push(`../img/vrgame${i}.jpg`);
+    games.push(`img/vrgame${i}.jpg`);
 }
 $(".change-game").on('click', function() {
     var randomNumber = Math.floor(Math.random() * 9);
